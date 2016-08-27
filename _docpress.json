@@ -1,0 +1,395 @@
+{
+  "toc": {
+    "sections": [
+      {
+        "title": "JS MythBusters",
+        "source": "README.md",
+        "url": "index.html",
+        "slug": "index",
+        "sections": [
+          {
+            "title": "Send your tip!",
+            "source": "send-tip.md",
+            "url": "send-tip.html",
+            "slug": "send-tip"
+          },
+          {
+            "title": "Bibliography",
+            "source": "bibliography.md",
+            "url": "bibliography.html",
+            "slug": "bibliography"
+          },
+          {
+            "title": "Resources",
+            "source": "resources.md",
+            "url": "resources.html",
+            "slug": "resources"
+          }
+        ]
+      },
+      {
+        "title": "Workflow",
+        "sections": [
+          {
+            "title": "Boolean condition",
+            "source": "workflow/boolean-conditions.md",
+            "url": "workflow/boolean-conditions.html",
+            "slug": "workflowboolean-conditions"
+          },
+          {
+            "title": "Lookup table",
+            "source": "workflow/lookup-table.md",
+            "url": "workflow/lookup-table.html",
+            "slug": "workflowlookup-table"
+          },
+          {
+            "title": "Math methods",
+            "source": "workflow/math.md",
+            "url": "workflow/math.html",
+            "slug": "workflowmath"
+          },
+          {
+            "title": "Memoizaton",
+            "source": "workflow/memoization.md",
+            "url": "workflow/memoization.html",
+            "slug": "workflowmemoization"
+          },
+          {
+            "title": "Scope",
+            "source": "workflow/scope.md",
+            "url": "workflow/scope.html",
+            "slug": "workflowscope"
+          },
+          {
+            "title": "Variable access",
+            "source": "workflow/variable-access.md",
+            "url": "workflow/variable-access.html",
+            "slug": "workflowvariable-access"
+          }
+        ]
+      },
+      {
+        "title": "V8",
+        "sections": [
+          {
+            "title": "Hidden Class",
+            "source": "v8-tips/hidden-class.md",
+            "url": "v8-tips/hidden-class.html",
+            "slug": "v8-tipshidden-class"
+          },
+          {
+            "title": "Sparse Arrays",
+            "source": "v8-tips/sparse-arrays.md",
+            "url": "v8-tips/sparse-arrays.html",
+            "slug": "v8-tipssparse-arrays"
+          },
+          {
+            "title": "Float Number",
+            "source": "v8-tips/float-number.md",
+            "url": "v8-tips/float-number.html",
+            "slug": "v8-tipsfloat-number"
+          },
+          {
+            "title": "Inline initialization",
+            "source": "v8-tips/inline-initialization.md",
+            "url": "v8-tips/inline-initialization.html",
+            "slug": "v8-tipsinline-initialization"
+          },
+          {
+            "title": "Monomorphic",
+            "source": "v8-tips/monomorphic.md",
+            "url": "v8-tips/monomorphic.html",
+            "slug": "v8-tipsmonomorphic"
+          },
+          {
+            "title": "use strict",
+            "source": "v8-tips/use-strict.md",
+            "url": "v8-tips/use-strict.html",
+            "slug": "v8-tipsuse-strict"
+          },
+          {
+            "title": "Freeing memory",
+            "source": "v8-tips/freeing-memory.md",
+            "url": "v8-tips/freeing-memory.html",
+            "slug": "v8-tipsfreeing-memory"
+          }
+        ]
+      },
+      {
+        "title": "Array",
+        "sections": [
+          {
+            "title": "Preallocation",
+            "source": "array/preallocation.md",
+            "url": "array/preallocation.html",
+            "slug": "arraypreallocation"
+          },
+          {
+            "title": ".pop over .shift",
+            "source": "array/pop-or-shift.md",
+            "url": "array/pop-or-shift.html",
+            "slug": "arraypop-or-shift"
+          },
+          {
+            "title": "arguments is special",
+            "source": "array/arguments.md",
+            "url": "array/arguments.html",
+            "slug": "arrayarguments"
+          }
+        ]
+      },
+      {
+        "title": "Date",
+        "sections": [
+          {
+            "title": "Creating timestamps",
+            "source": "date/timestamp.md",
+            "url": "date/timestamp.html",
+            "slug": "datetimestamp"
+          }
+        ]
+      },
+      {
+        "title": "Error",
+        "sections": [
+          {
+            "title": "Avoid try/catch",
+            "source": "error/try-catch.md",
+            "url": "error/try-catch.html",
+            "slug": "errortry-catch"
+          }
+        ]
+      },
+      {
+        "title": "Function",
+        "sections": [
+          {
+            "title": "new agnostic",
+            "source": "function/new.md",
+            "url": "function/new.html",
+            "slug": "functionnew"
+          },
+          {
+            "title": ".bind is slower",
+            "source": "function/bind.md",
+            "url": "function/bind.html",
+            "slug": "functionbind"
+          }
+        ]
+      },
+      {
+        "title": "RegexEp",
+        "sections": [
+          {
+            "title": "Common sense",
+            "source": "regexp/common-sense.md",
+            "url": "regexp/common-sense.html",
+            "slug": "regexpcommon-sense"
+          },
+          {
+            "title": "Focus on failing faster",
+            "source": "regexp/fail-faster.md",
+            "url": "regexp/fail-faster.html",
+            "slug": "regexpfail-faster"
+          },
+          {
+            "title": "Correct method",
+            "source": "regexp/methods.md",
+            "url": "regexp/methods.html",
+            "slug": "regexpmethods"
+          }
+        ]
+      },
+      {
+        "title": "String",
+        "sections": [
+          {
+            "title": "+= for concat",
+            "source": "string/concat.md",
+            "url": "string/concat.html",
+            "slug": "stringconcat"
+          }
+        ]
+      }
+    ]
+  },
+  "index": {
+    "index.html": {
+      "source": "README.md",
+      "title": "JS MythBusters",
+      "slug": "index"
+    },
+    "send-tip.html": {
+      "source": "send-tip.md",
+      "title": "Send your tip!",
+      "slug": "send-tip"
+    },
+    "bibliography.html": {
+      "source": "bibliography.md",
+      "title": "Bibliography",
+      "slug": "bibliography"
+    },
+    "resources.html": {
+      "source": "resources.md",
+      "title": "Resources",
+      "slug": "resources"
+    },
+    "workflow/boolean-conditions.html": {
+      "source": "workflow/boolean-conditions.md",
+      "title": "Boolean condition",
+      "slug": "workflowboolean-conditions"
+    },
+    "workflow/lookup-table.html": {
+      "source": "workflow/lookup-table.md",
+      "title": "Lookup table",
+      "slug": "workflowlookup-table"
+    },
+    "workflow/math.html": {
+      "source": "workflow/math.md",
+      "title": "Math methods",
+      "slug": "workflowmath"
+    },
+    "workflow/memoization.html": {
+      "source": "workflow/memoization.md",
+      "title": "Memoizaton",
+      "slug": "workflowmemoization"
+    },
+    "workflow/scope.html": {
+      "source": "workflow/scope.md",
+      "title": "Scope",
+      "slug": "workflowscope"
+    },
+    "workflow/variable-access.html": {
+      "source": "workflow/variable-access.md",
+      "title": "Variable access",
+      "slug": "workflowvariable-access"
+    },
+    "v8-tips/hidden-class.html": {
+      "source": "v8-tips/hidden-class.md",
+      "title": "Hidden Class",
+      "slug": "v8-tipshidden-class"
+    },
+    "v8-tips/sparse-arrays.html": {
+      "source": "v8-tips/sparse-arrays.md",
+      "title": "Sparse Arrays",
+      "slug": "v8-tipssparse-arrays"
+    },
+    "v8-tips/float-number.html": {
+      "source": "v8-tips/float-number.md",
+      "title": "Float Number",
+      "slug": "v8-tipsfloat-number"
+    },
+    "v8-tips/inline-initialization.html": {
+      "source": "v8-tips/inline-initialization.md",
+      "title": "Inline initialization",
+      "slug": "v8-tipsinline-initialization"
+    },
+    "v8-tips/monomorphic.html": {
+      "source": "v8-tips/monomorphic.md",
+      "title": "Monomorphic",
+      "slug": "v8-tipsmonomorphic"
+    },
+    "v8-tips/use-strict.html": {
+      "source": "v8-tips/use-strict.md",
+      "title": "use strict",
+      "slug": "v8-tipsuse-strict"
+    },
+    "v8-tips/freeing-memory.html": {
+      "source": "v8-tips/freeing-memory.md",
+      "title": "Freeing memory",
+      "slug": "v8-tipsfreeing-memory"
+    },
+    "array/preallocation.html": {
+      "source": "array/preallocation.md",
+      "title": "Preallocation",
+      "slug": "arraypreallocation"
+    },
+    "array/pop-or-shift.html": {
+      "source": "array/pop-or-shift.md",
+      "title": ".pop over .shift",
+      "slug": "arraypop-or-shift"
+    },
+    "array/arguments.html": {
+      "source": "array/arguments.md",
+      "title": "arguments is special",
+      "slug": "arrayarguments"
+    },
+    "date/timestamp.html": {
+      "source": "date/timestamp.md",
+      "title": "Creating timestamps",
+      "slug": "datetimestamp"
+    },
+    "error/try-catch.html": {
+      "source": "error/try-catch.md",
+      "title": "Avoid try/catch",
+      "slug": "errortry-catch"
+    },
+    "function/new.html": {
+      "source": "function/new.md",
+      "title": "new agnostic",
+      "slug": "functionnew"
+    },
+    "function/bind.html": {
+      "source": "function/bind.md",
+      "title": ".bind is slower",
+      "slug": "functionbind"
+    },
+    "regexp/common-sense.html": {
+      "source": "regexp/common-sense.md",
+      "title": "Common sense",
+      "slug": "regexpcommon-sense"
+    },
+    "regexp/fail-faster.html": {
+      "source": "regexp/fail-faster.md",
+      "title": "Focus on failing faster",
+      "slug": "regexpfail-faster"
+    },
+    "regexp/methods.html": {
+      "source": "regexp/methods.md",
+      "title": "Correct method",
+      "slug": "regexpmethods"
+    },
+    "string/concat.html": {
+      "source": "string/concat.md",
+      "title": "+= for concat",
+      "slug": "stringconcat"
+    }
+  },
+  "sources": {
+    "README.md": "index.html",
+    "send-tip.md": "send-tip.html",
+    "bibliography.md": "bibliography.html",
+    "resources.md": "resources.html",
+    "workflow/boolean-conditions.md": "workflow/boolean-conditions.html",
+    "workflow/lookup-table.md": "workflow/lookup-table.html",
+    "workflow/math.md": "workflow/math.html",
+    "workflow/memoization.md": "workflow/memoization.html",
+    "workflow/scope.md": "workflow/scope.html",
+    "workflow/variable-access.md": "workflow/variable-access.html",
+    "v8-tips/hidden-class.md": "v8-tips/hidden-class.html",
+    "v8-tips/sparse-arrays.md": "v8-tips/sparse-arrays.html",
+    "v8-tips/float-number.md": "v8-tips/float-number.html",
+    "v8-tips/inline-initialization.md": "v8-tips/inline-initialization.html",
+    "v8-tips/monomorphic.md": "v8-tips/monomorphic.html",
+    "v8-tips/use-strict.md": "v8-tips/use-strict.html",
+    "v8-tips/freeing-memory.md": "v8-tips/freeing-memory.html",
+    "array/preallocation.md": "array/preallocation.html",
+    "array/pop-or-shift.md": "array/pop-or-shift.html",
+    "array/arguments.md": "array/arguments.html",
+    "date/timestamp.md": "date/timestamp.html",
+    "error/try-catch.md": "error/try-catch.html",
+    "function/new.md": "function/new.html",
+    "function/bind.md": "function/bind.html",
+    "regexp/common-sense.md": "regexp/common-sense.html",
+    "regexp/fail-faster.md": "regexp/fail-faster.html",
+    "regexp/methods.md": "regexp/methods.html",
+    "string/concat.md": "string/concat.html",
+    "docs/docpress.json": "docpress.json",
+    "docs/gulpfile.coffee": "gulpfile.coffee",
+    "docs/assets/css/build.css": "assets/css/build.css",
+    "docs/assets/js/main.js": "assets/js/main.js",
+    "docs/assets/scss/_style.scss": "assets/scss/_style.scss",
+    "docs/assets/scss/_variables.scss": "assets/scss/_variables.scss",
+    "docs/assets/scss/main.scss": "assets/scss/main.scss"
+  }
+}

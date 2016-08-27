@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
+    <link rel="stylesheet" href="../assets/css/build.css?t=8aa3b5f9">
+    <script src="../assets/js/main.js?t=867afd68"></script>
+    <script src="../assets/script.js?t=2bcc4b59"></script>
+    <title>Scope</title>
+    <meta name="viewport" content="width=device-width">
+  </head>
+  <body class="-menu-visible">
+    <div class="doc-layout">
+      <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="body page-workflowscope">
+        <div class="header-nav">
+          <div class="right"><a href="https://github.com/Kikobeats/js-mythbusters" data-title="Kikobeats/js-mythbusters" class="iconlink">
+              <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
+          </div>
+        </div>
+        <div class="markdown-body"><h1 id="setup-the-correct-variables-scope.">Setup the correct variables scope.</h1>
+<p>If you declare a global variable but you only use it in a little part of your code, then you are keeping in memory the variable all time but.</p>
+<p>When a variable is referenced, Javascript hunts it down by looping through the different members of the scope chain. This scope chain is the set of variables available within the current scope, and across all major browsers it has at least two items: a set of local variables and a set of global variables.</p>
+<p>Simply put, the deeper the engine has to dig into this scope chain, the longer the operation will take. It first goes through the local variables starting with this, the function arguments, then any locally defined variables, and afterwards iterates through any global variables.</p>
+<p><strong>Continue reading: ES2015 tips</strong></p>
+<p>Notes that with ES2015, you can use <code>const</code> and <code>let</code> as well.</p>
+<p><code>const</code> means that the variable can&#x2019;t be reassigned. (Not to be confused with immutable values. Unlike true immutable datatypes such as those produced by Immutable.js and Mori, a <code>const</code> object can have properties mutated.):</p>
+<pre><code class="lang-js"><span class="pl-k">const</span> objt = { foo: <span class="pl-s">&apos;bar&apos;</span> }
+
+objt = {}
+<span class="pl-c1">console</span>.log(objt) <span class="pl-c">// =&gt; = { foo: &apos;bar&apos; }</span>
+
+objt.foo = <span class="pl-s">&apos;WAT&apos;</span>
+<span class="pl-c1">console</span>.log(objt) <span class="pl-c">// =&gt; = { foo: &apos;WAT&apos; }</span>
+
+objt.wat = <span class="pl-s">&apos;the hell&apos;</span>
+<span class="pl-c1">console</span>.log(objt) <span class="pl-c">// =&gt; = { foo: &apos;WAT&apos;, wat: &apos;the hell&apos; }</span>
+
+<span class="pl-k">const</span> objt = {}
+<span class="pl-c">// =&gt; TypeError: Identifier &apos;objt&apos; has already been declared</span>
+</code></pre>
+<p><code>let</code> means that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it&#x2019;s defined in, which is not always the entire containing function.</p>
+<p><code>var</code> is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.</p>
+<p>You need to be reassign? then <code>let</code>, else <code>const</code>.</p>
+<p>Another important approach: If you need to deallocate a value by unsetting it, you may consider <code>let</code> over <code>const</code>.</p>
+
+        </div>
+        <div class="footer-nav">
+          <div class="left"><a href="../workflow/memoization.html"><span class="title">Memoizaton</span></a></div>
+          <div class="right"><a href="../workflow/variable-access.html"><span class="label">Next: </span><span class="title">Variable access</span></a></div>
+        </div>
+      </div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1 -parent"><a href="../index.html" class="link title  link-index">JS MythBusters</a>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../send-tip.html" class="link title  link-send-tip">Send your tip!</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../bibliography.html" class="link title  link-bibliography">Bibliography</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../resources.html" class="link title  link-resources">Resources</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Workflow</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../workflow/boolean-conditions.html" class="link title  link-workflowboolean-conditions">Boolean condition</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../workflow/lookup-table.html" class="link title  link-workflowlookup-table">Lookup table</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../workflow/math.html" class="link title  link-workflowmath">Math methods</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../workflow/memoization.html" class="link title  link-workflowmemoization">Memoizaton</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../workflow/scope.html" class="link title -active link-workflowscope">Scope</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../workflow/variable-access.html" class="link title  link-workflowvariable-access">Variable access</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">V8</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../v8-tips/hidden-class.html" class="link title  link-v8-tipshidden-class">Hidden Class</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../v8-tips/sparse-arrays.html" class="link title  link-v8-tipssparse-arrays">Sparse Arrays</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../v8-tips/float-number.html" class="link title  link-v8-tipsfloat-number">Float Number</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../v8-tips/inline-initialization.html" class="link title  link-v8-tipsinline-initialization">Inline initialization</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../v8-tips/monomorphic.html" class="link title  link-v8-tipsmonomorphic">Monomorphic</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../v8-tips/use-strict.html" class="link title  link-v8-tipsuse-strict">use strict</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../v8-tips/freeing-memory.html" class="link title  link-v8-tipsfreeing-memory">Freeing memory</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Array</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../array/preallocation.html" class="link title  link-arraypreallocation">Preallocation</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../array/pop-or-shift.html" class="link title  link-arraypop-or-shift">.pop over .shift</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../array/arguments.html" class="link title  link-arrayarguments">arguments is special</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Date</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../date/timestamp.html" class="link title  link-datetimestamp">Creating timestamps</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Error</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../error/try-catch.html" class="link title  link-errortry-catch">Avoid try/catch</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Function</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../function/new.html" class="link title  link-functionnew">new agnostic</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../function/bind.html" class="link title  link-functionbind">.bind is slower</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">RegexEp</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../regexp/common-sense.html" class="link title  link-regexpcommon-sense">Common sense</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../regexp/fail-faster.html" class="link title  link-regexpfail-faster">Focus on failing faster</a>
+                </li>
+                <li class="menu-item -level-2"><a href="../regexp/methods.html" class="link title  link-regexpmethods">Correct method</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">String</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a href="../string/concat.html" class="link title  link-stringconcat">+= for concat</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </body>
+</html>
