@@ -388,6 +388,7 @@
     "docs/gulpfile.coffee": "gulpfile.coffee",
     "docs/assets/css/build.css": "assets/css/build.css",
     "docs/assets/js/main.js": "assets/js/main.js",
+    "docs/assets/scss/_mobile.scss": "assets/scss/_mobile.scss",
     "docs/assets/scss/_style.scss": "assets/scss/_style.scss",
     "docs/assets/scss/_variables.scss": "assets/scss/_variables.scss",
     "docs/assets/scss/main.scss": "assets/scss/main.scss"
