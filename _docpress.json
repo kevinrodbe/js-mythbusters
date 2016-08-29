@@ -40,7 +40,24 @@
             "title": "Lookup table",
             "source": "workflow/lookup-table.md",
             "url": "workflow/lookup-table.html",
-            "slug": "workflowlookup-table"
+            "slug": "workflowlookup-table",
+            "headings": [
+              {
+                "title": "Index lookups",
+                "depth": 2,
+                "id": "index-lookups"
+              },
+              {
+                "title": "Array vs. Object",
+                "depth": 2,
+                "id": "array-vs.-object"
+              },
+              {
+                "title": "Caveats",
+                "depth": 2,
+                "id": "caveats"
+              }
+            ]
           },
           {
             "title": "Math methods",
@@ -178,7 +195,7 @@
         ]
       },
       {
-        "title": "RegexEp",
+        "title": "RegExp",
         "sections": [
           {
             "title": "Common sense",
@@ -242,7 +259,24 @@
     "workflow/lookup-table.html": {
       "source": "workflow/lookup-table.md",
       "title": "Lookup table",
-      "slug": "workflowlookup-table"
+      "slug": "workflowlookup-table",
+      "headings": [
+        {
+          "title": "Index lookups",
+          "depth": 2,
+          "id": "index-lookups"
+        },
+        {
+          "title": "Array vs. Object",
+          "depth": 2,
+          "id": "array-vs.-object"
+        },
+        {
+          "title": "Caveats",
+          "depth": 2,
+          "id": "caveats"
+        }
+      ]
     },
     "workflow/math.html": {
       "source": "workflow/math.md",

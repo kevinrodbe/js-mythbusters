@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="lookup-table-for-result-matching">Lookup table for result matching</h1>
-<p>When we optimizing <code>if</code>/<code>else</code>, the goal is always to minimize the number of conditions to evaluate before taking the correct path. The easiest optimization is therefore to ensure that the most common conditions are first:</p>
+<p>When optimizing <code>if</code>/<code>else</code>, minimize the number of conditions to evaluate. This applies to <code>switch</code> cases as well. The easiest optimization is to ensure that the most common conditions are first:</p>
 <pre><code class="lang-js"><span class="pl-k">if</span> (value &lt; <span class="hljs-number">5</span>) {
   <span class="pl-c">// most frequency case</span>
 } <span class="pl-k">else</span> <span class="pl-k">if</span> (value &gt; <span class="hljs-number">5</span> &amp;&amp; value &lt; <span class="hljs-number">10</span>) {
@@ -34,8 +34,8 @@
  <span class="pl-c">// in other case</span>
 }
 </code></pre>
-<p><code>switch</code> is more or less the same (maybe more semantic and more structured code). But the point is makes the reduce the path size.</p>
-<p>Better use a direct match approach based in object/array index:</p>
+<h2 id="index-lookups">Index lookups</h2>
+<p>It&#x2019;s better to use a direct match approach using object/array index lookups:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> lookupTable = {
   <span class="pl-s">&apos;1&apos;</span>: <span class="pl-s">&apos;is greater&apos;</span>,
   <span class="pl-s">&apos;-1&apos;</span>: <span class="pl-s">&apos;is less&apos;</span>,
@@ -46,17 +46,19 @@
 
 lookupTable[compare(<span class="hljs-number">4</span>, myValue)]
 </code></pre>
-<p>Keep in mind that using an <code>Object</code> you can use <code>undefined</code> or <code>&apos;&apos;</code> as key.</p>
-<p>Also be careful about choose betweetn <code>Object</code> or <code>Array</code> for this purpose:</p>
+<p>In objects, you may also use <code>undefined</code> or <code>&apos;&apos;</code> as keys.</p>
+<h2 id="array-vs.-object">Array vs. Object</h2>
+<p>Also be careful about choose between <code>Object</code> or <code>Array</code> for this purpose:</p>
 <ul>
 <li>If you need a incremental index, use <code>Array</code>.</li>
-<li>In other case use <code>Object</code>.</li>
+<li>In other cases, use <code>Object</code>.</li>
 </ul>
-<p>Under <code>ES2015</code>, consider use <code>Map</code> or <code>Set</code> combined with <code>Symbol</code>.</p>
-<p>Althought is more readable, not in all scenarios use a lookup table is better: The cost of create the lookup table could be higher tan use a set of <code>if</code>/<code>else</code> statements. So, it depends about your code running time:</p>
+<p>In ES2015, also consider using <code>Map</code> or <code>Set</code> combined with <code>Symbol</code>.</p>
+<h2 id="caveats">Caveats</h2>
+<p>Although is more readable, using a lookup table isn&#x2019;t always better. The cost of creating the lookup table could be higher than the use set of <code>if</code>/<code>else</code> statements. So, it depends about your code running time:</p>
 <ul>
-<li>If you have to handle a set of conditions (maybe less than 3 could be a metric) or the code running life is short, use <code>if</code>/<code>else</code>.</li>
-<li>In other case use lookup table solution.</li>
+<li>If you have to handle a small set of conditions (maybe less than 3) or the code running life is short, use <code>if</code>/<code>else</code>.</li>
+<li>In other cases, use the lookup table solution.</li>
 </ul>
 
         </div>
@@ -83,6 +85,14 @@ lookupTable[compare(<span class="hljs-number">4</span>, myValue)]
                 <li class="menu-item -level-2"><a href="../workflow/boolean-conditions.html" class="link title  link-workflowboolean-conditions">Boolean condition</a>
                 </li>
                 <li class="menu-item -level-2"><a href="../workflow/lookup-table.html" class="link title -active link-workflowlookup-table">Lookup table</a>
+                  <ul class="headings heading-list">
+                    <li class="heading-item -depth-2"><a href="#index-lookups" class="hlink link-index-lookups">Index lookups</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#array-vs.-object" class="hlink link-array-vs.-object">Array vs. Object</a>
+                    </li>
+                    <li class="heading-item -depth-2"><a href="#caveats" class="hlink link-caveats">Caveats</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="menu-item -level-2"><a href="../workflow/math.html" class="link title  link-workflowmath">Math methods</a>
                 </li>
@@ -142,7 +152,7 @@ lookupTable[compare(<span class="hljs-number">4</span>, myValue)]
                 </li>
               </ul>
             </li>
-            <li class="menu-item -level-1 -parent"><span class="title">RegexEp</span>
+            <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="../regexp/common-sense.html" class="link title  link-regexpcommon-sense">Common sense</a>
                 </li>
