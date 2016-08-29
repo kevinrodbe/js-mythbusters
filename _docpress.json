@@ -2,7 +2,7 @@
   "toc": {
     "sections": [
       {
-        "title": "JS MythBusters",
+        "title": "JS MythBusters_",
         "source": "README.md",
         "url": "index.html",
         "slug": "index",
@@ -216,7 +216,7 @@
   "index": {
     "index.html": {
       "source": "README.md",
-      "title": "JS MythBusters",
+      "title": "JS MythBusters_",
       "slug": "index"
     },
     "send-tip.html": {
@@ -390,7 +390,7 @@
     "docs/assets/js/main.js": "assets/js/main.js",
     "docs/assets/scss/_mobile.scss": "assets/scss/_mobile.scss",
     "docs/assets/scss/_style.scss": "assets/scss/_style.scss",
-    "docs/assets/scss/_variables.scss": "assets/scss/_variables.scss",
-    "docs/assets/scss/main.scss": "assets/scss/main.scss"
+    "docs/assets/scss/main.scss": "assets/scss/main.scss",
+    "docs/assets/scss/_variables.scss": "assets/scss/_variables.scss"
   }
 }
