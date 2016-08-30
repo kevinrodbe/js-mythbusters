@@ -2,14 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=a44c9e9d">
-    <link rel="stylesheet" href="../assets/css/build.css?t=59ce937b">
-    <script src="../assets/js/main.js?t=714bcb68"></script>
-    <script src="../assets/script.js?t=2bcc4b59"></script>
-    <title>Scope</title>
+    <link rel="stylesheet" href="../assets/style.css?t=89c89900">
+    <link rel="stylesheet" href="../css/build.css?t=59ce937b">
+    <script src="../js/main.js?t=714bcb68"></script>
+    <script src="../assets/script.js?t=7ed45746"></script>
+    <title>Scope - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
-    <script>
-      if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
+    <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
         ga('create',"UA-83295706-1",'auto')
       }
@@ -18,9 +17,105 @@
   <body class="-menu-visible">
     <div class="doc-layout">
       <div class="toggle menu-toggle js-menu-toggle"></div>
+      <div class="menu toc-menu">
+        <li class="menu-item -level-0 -parent">
+          <ul class="submenu">
+            <li class="menu-item -level-1 -parent"><a class="link title  link-index" href="../index.html">JS MythBusters_</a>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-send-tip" href="../send-tip.html">Send your tip!</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-bibliography" href="../bibliography.html">Bibliography</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-resources" href="../resources.html">Resources</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Workflow</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-workflowboolean-conditions" href="../workflow/boolean-conditions.html">Boolean condition</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-workflowlookup-table" href="../workflow/lookup-table.html">Lookup table</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-workflowscope" href="../workflow/scope.html">Scope</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-workflowvariable-access" href="../workflow/variable-access.html">Variable access</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">V8</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipshidden-class" href="../v8-tips/hidden-class.html">Hidden Class</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipssparse-arrays" href="../v8-tips/sparse-arrays.html">Sparse Arrays</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipsfloat-number" href="../v8-tips/float-number.html">Float Number</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipsinline-initialization" href="../v8-tips/inline-initialization.html">Inline initialization</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipsmonomorphic" href="../v8-tips/monomorphic.html">Monomorphic</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipsuse-strict" href="../v8-tips/use-strict.html">use strict</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-v8-tipsfreeing-memory" href="../v8-tips/freeing-memory.html">Freeing memory</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Array</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-arraypreallocation" href="../array/preallocation.html">Preallocation</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-arraypop-or-shift" href="../array/pop-or-shift.html">.pop over .shift</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-arrayarguments" href="../array/arguments.html">arguments is special</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Date</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-datetimestamp" href="../date/timestamp.html">Creating timestamps</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Error</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-errortry-catch" href="../error/try-catch.html">Avoid try/catch</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">Function</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-functionnew" href="../function/new.html">new agnostic</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-functionbind" href="../function/bind.html">.bind is slower</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-regexpcommon-sense" href="../regexp/common-sense.html">Common sense</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-regexpmethods" href="../regexp/methods.html">Correct method</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item -level-1 -parent"><span class="title">String</span>
+              <ul class="submenu">
+                <li class="menu-item -level-2"><a class="link title  link-stringconcat" href="../string/concat.html">+= for concat</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
       <div class="body page-workflowscope">
         <div class="header-nav">
-          <div class="right"><a href="https://github.com/Kikobeats/js-mythbusters" data-title="Kikobeats/js-mythbusters" class="iconlink">
+          <div class="right"><a class="iconlink" href="https://github.com/Kikobeats/js-mythbusters" data-title="Kikobeats/js-mythbusters">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
@@ -50,107 +145,20 @@ objt.wat = <span class="pl-s">&apos;the hell&apos;</span>
 <p>You need to be reassign? then <code>let</code>, else <code>const</code>.</p>
 <p>Another important approach: If you need to deallocate a value by unsetting it, you may consider <code>let</code> over <code>const</code>.</p>
 
+          <div id="disqus_thread"></div>
+          <script>var disqus_shortname = 'mythbusters-js-org';
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
         <div class="footer-nav">
           <div class="left"><a href="../workflow/memoization.html"><span class="title">Memoizaton</span></a></div>
           <div class="right"><a href="../workflow/variable-access.html"><span class="label">Next: </span><span class="title">Variable access</span></a></div>
         </div>
-      </div>
-      <div class="menu toc-menu">
-        <li class="menu-item -level-0 -parent">
-          <ul class="submenu">
-            <li class="menu-item -level-1 -parent"><a href="../index.html" class="link title  link-index">JS MythBusters_</a>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../send-tip.html" class="link title  link-send-tip">Send your tip!</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../bibliography.html" class="link title  link-bibliography">Bibliography</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../resources.html" class="link title  link-resources">Resources</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Workflow</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../workflow/boolean-conditions.html" class="link title  link-workflowboolean-conditions">Boolean condition</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../workflow/lookup-table.html" class="link title  link-workflowlookup-table">Lookup table</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../workflow/math.html" class="link title  link-workflowmath">Math methods</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../workflow/memoization.html" class="link title  link-workflowmemoization">Memoizaton</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../workflow/scope.html" class="link title -active link-workflowscope">Scope</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../workflow/variable-access.html" class="link title  link-workflowvariable-access">Variable access</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">V8</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../v8-tips/hidden-class.html" class="link title  link-v8-tipshidden-class">Hidden Class</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../v8-tips/sparse-arrays.html" class="link title  link-v8-tipssparse-arrays">Sparse Arrays</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../v8-tips/float-number.html" class="link title  link-v8-tipsfloat-number">Float Number</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../v8-tips/inline-initialization.html" class="link title  link-v8-tipsinline-initialization">Inline initialization</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../v8-tips/monomorphic.html" class="link title  link-v8-tipsmonomorphic">Monomorphic</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../v8-tips/use-strict.html" class="link title  link-v8-tipsuse-strict">use strict</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../v8-tips/freeing-memory.html" class="link title  link-v8-tipsfreeing-memory">Freeing memory</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Array</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../array/preallocation.html" class="link title  link-arraypreallocation">Preallocation</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../array/pop-or-shift.html" class="link title  link-arraypop-or-shift">.pop over .shift</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../array/arguments.html" class="link title  link-arrayarguments">arguments is special</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Date</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../date/timestamp.html" class="link title  link-datetimestamp">Creating timestamps</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Error</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../error/try-catch.html" class="link title  link-errortry-catch">Avoid try/catch</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">Function</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../function/new.html" class="link title  link-functionnew">new agnostic</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../function/bind.html" class="link title  link-functionbind">.bind is slower</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../regexp/common-sense.html" class="link title  link-regexpcommon-sense">Common sense</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../regexp/fail-faster.html" class="link title  link-regexpfail-faster">Focus on failing faster</a>
-                </li>
-                <li class="menu-item -level-2"><a href="../regexp/methods.html" class="link title  link-regexpmethods">Correct method</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-item -level-1 -parent"><span class="title">String</span>
-              <ul class="submenu">
-                <li class="menu-item -level-2"><a href="../string/concat.html" class="link title  link-stringconcat">+= for concat</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
       </div>
     </div>
   </body>

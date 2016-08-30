@@ -234,31 +234,37 @@
     "index.html": {
       "source": "README.md",
       "title": "JS MythBusters_",
+      "pageTitle": "JS MythBusters_",
       "slug": "index"
     },
     "send-tip.html": {
       "source": "send-tip.md",
-      "title": "Send your tip!",
+      "title": "Send your tip! - JS MythBusters_",
+      "pageTitle": "Send your tip!",
       "slug": "send-tip"
     },
     "bibliography.html": {
       "source": "bibliography.md",
-      "title": "Bibliography",
+      "title": "Bibliography - JS MythBusters_",
+      "pageTitle": "Bibliography",
       "slug": "bibliography"
     },
     "resources.html": {
       "source": "resources.md",
-      "title": "Resources",
+      "title": "Resources - JS MythBusters_",
+      "pageTitle": "Resources",
       "slug": "resources"
     },
     "workflow/boolean-conditions.html": {
       "source": "workflow/boolean-conditions.md",
-      "title": "Boolean condition",
+      "title": "Boolean condition - JS MythBusters_",
+      "pageTitle": "Boolean condition",
       "slug": "workflowboolean-conditions"
     },
     "workflow/lookup-table.html": {
       "source": "workflow/lookup-table.md",
-      "title": "Lookup table",
+      "title": "Lookup table - JS MythBusters_",
+      "pageTitle": "Lookup table",
       "slug": "workflowlookup-table",
       "headings": [
         {
@@ -280,112 +286,134 @@
     },
     "workflow/math.html": {
       "source": "workflow/math.md",
-      "title": "Math methods",
+      "title": "Math methods - JS MythBusters_",
+      "pageTitle": "Math methods",
       "slug": "workflowmath"
     },
     "workflow/memoization.html": {
       "source": "workflow/memoization.md",
-      "title": "Memoizaton",
+      "title": "Memoizaton - JS MythBusters_",
+      "pageTitle": "Memoizaton",
       "slug": "workflowmemoization"
     },
     "workflow/scope.html": {
       "source": "workflow/scope.md",
-      "title": "Scope",
+      "title": "Scope - JS MythBusters_",
+      "pageTitle": "Scope",
       "slug": "workflowscope"
     },
     "workflow/variable-access.html": {
       "source": "workflow/variable-access.md",
-      "title": "Variable access",
+      "title": "Variable access - JS MythBusters_",
+      "pageTitle": "Variable access",
       "slug": "workflowvariable-access"
     },
     "v8-tips/hidden-class.html": {
       "source": "v8-tips/hidden-class.md",
-      "title": "Hidden Class",
+      "title": "Hidden Class - JS MythBusters_",
+      "pageTitle": "Hidden Class",
       "slug": "v8-tipshidden-class"
     },
     "v8-tips/sparse-arrays.html": {
       "source": "v8-tips/sparse-arrays.md",
-      "title": "Sparse Arrays",
+      "title": "Sparse Arrays - JS MythBusters_",
+      "pageTitle": "Sparse Arrays",
       "slug": "v8-tipssparse-arrays"
     },
     "v8-tips/float-number.html": {
       "source": "v8-tips/float-number.md",
-      "title": "Float Number",
+      "title": "Float Number - JS MythBusters_",
+      "pageTitle": "Float Number",
       "slug": "v8-tipsfloat-number"
     },
     "v8-tips/inline-initialization.html": {
       "source": "v8-tips/inline-initialization.md",
-      "title": "Inline initialization",
+      "title": "Inline initialization - JS MythBusters_",
+      "pageTitle": "Inline initialization",
       "slug": "v8-tipsinline-initialization"
     },
     "v8-tips/monomorphic.html": {
       "source": "v8-tips/monomorphic.md",
-      "title": "Monomorphic",
+      "title": "Monomorphic - JS MythBusters_",
+      "pageTitle": "Monomorphic",
       "slug": "v8-tipsmonomorphic"
     },
     "v8-tips/use-strict.html": {
       "source": "v8-tips/use-strict.md",
-      "title": "use strict",
+      "title": "use strict - JS MythBusters_",
+      "pageTitle": "use strict",
       "slug": "v8-tipsuse-strict"
     },
     "v8-tips/freeing-memory.html": {
       "source": "v8-tips/freeing-memory.md",
-      "title": "Freeing memory",
+      "title": "Freeing memory - JS MythBusters_",
+      "pageTitle": "Freeing memory",
       "slug": "v8-tipsfreeing-memory"
     },
     "array/preallocation.html": {
       "source": "array/preallocation.md",
-      "title": "Preallocation",
+      "title": "Preallocation - JS MythBusters_",
+      "pageTitle": "Preallocation",
       "slug": "arraypreallocation"
     },
     "array/pop-or-shift.html": {
       "source": "array/pop-or-shift.md",
-      "title": ".pop over .shift",
+      "title": ".pop over .shift - JS MythBusters_",
+      "pageTitle": ".pop over .shift",
       "slug": "arraypop-or-shift"
     },
     "array/arguments.html": {
       "source": "array/arguments.md",
-      "title": "arguments is special",
+      "title": "arguments is special - JS MythBusters_",
+      "pageTitle": "arguments is special",
       "slug": "arrayarguments"
     },
     "date/timestamp.html": {
       "source": "date/timestamp.md",
-      "title": "Creating timestamps",
+      "title": "Creating timestamps - JS MythBusters_",
+      "pageTitle": "Creating timestamps",
       "slug": "datetimestamp"
     },
     "error/try-catch.html": {
       "source": "error/try-catch.md",
-      "title": "Avoid try/catch",
+      "title": "Avoid try/catch - JS MythBusters_",
+      "pageTitle": "Avoid try/catch",
       "slug": "errortry-catch"
     },
     "function/new.html": {
       "source": "function/new.md",
-      "title": "new agnostic",
+      "title": "new agnostic - JS MythBusters_",
+      "pageTitle": "new agnostic",
       "slug": "functionnew"
     },
     "function/bind.html": {
       "source": "function/bind.md",
-      "title": ".bind is slower",
+      "title": ".bind is slower - JS MythBusters_",
+      "pageTitle": ".bind is slower",
       "slug": "functionbind"
     },
     "regexp/common-sense.html": {
       "source": "regexp/common-sense.md",
-      "title": "Common sense",
+      "title": "Common sense - JS MythBusters_",
+      "pageTitle": "Common sense",
       "slug": "regexpcommon-sense"
     },
     "regexp/fail-faster.html": {
       "source": "regexp/fail-faster.md",
-      "title": "Focus on failing faster",
+      "title": "Focus on failing faster - JS MythBusters_",
+      "pageTitle": "Focus on failing faster",
       "slug": "regexpfail-faster"
     },
     "regexp/methods.html": {
       "source": "regexp/methods.md",
-      "title": "Correct method",
+      "title": "Correct method - JS MythBusters_",
+      "pageTitle": "Correct method",
       "slug": "regexpmethods"
     },
     "string/concat.html": {
       "source": "string/concat.md",
-      "title": "+= for concat",
+      "title": "+= for concat - JS MythBusters_",
+      "pageTitle": "+= for concat",
       "slug": "stringconcat"
     }
   },
@@ -418,13 +446,11 @@
     "regexp/fail-faster.md": "regexp/fail-faster.html",
     "regexp/methods.md": "regexp/methods.html",
     "string/concat.md": "string/concat.html",
-    "docs/docpress.json": "docpress.json",
-    "docs/gulpfile.coffee": "gulpfile.coffee",
-    "docs/assets/css/build.css": "assets/css/build.css",
-    "docs/assets/js/main.js": "assets/js/main.js",
-    "docs/assets/scss/_mobile.scss": "assets/scss/_mobile.scss",
-    "docs/assets/scss/_style.scss": "assets/scss/_style.scss",
-    "docs/assets/scss/_variables.scss": "assets/scss/_variables.scss",
-    "docs/assets/scss/main.scss": "assets/scss/main.scss"
+    "assets/css/build.css": "css/build.css",
+    "assets/js/main.js": "js/main.js",
+    "assets/scss/_mobile.scss": "scss/_mobile.scss",
+    "assets/scss/_style.scss": "scss/_style.scss",
+    "assets/scss/_variables.scss": "scss/_variables.scss",
+    "assets/scss/main.scss": "scss/main.scss"
   }
 }
