@@ -120,10 +120,10 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="avoid-trycatch">Avoid try/catch</h1>
-<p>Certain constructs like <code>try/catch</code> are considered not optimizable for the JavaScript engine, so avoid handle business logic inside.</p>
-<p>Just for pass an error as callback and this type of things.</p>
-<p>Or maybe the think that you need to avoid is synchronous code? :P</p>
-<p>A good approach for support optimization with throweable code is return an <code>Error</code> an later check about the type.</p>
+<p>Certain constructs like <code>try/catch</code> are considered not optimizable by the JavaScript engine, so avoid handling business logic inside.</p>
+<p>Just pass an error handler as a callback for this type of things.</p>
+<p>Or maybe the thing that you need to avoid is synchronous code? :P</p>
+<p>A good approach for supporting optimization with throweable code is to return an <code>Error</code> and later and check the type.</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">maybeError</span> (<span class="hljs-params"></span>) </span>{
   <span class="pl-c">/*  ... */</span>
 }
