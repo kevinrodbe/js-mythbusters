@@ -122,8 +122,8 @@
         <div class="markdown-body"><h1 id="control-flow-based-in-boolean-condition">Control flow based in boolean condition</h1>
 <p>Avoid using <code>&gt;=</code> and <code>&lt;=</code> unless necessary. It&#x2019;s faster to use a simpler comparison.</p>
 <pre><code class="lang-js"><span class="pl-c">// slow</span>
-<span class="pl-c">// two boolean conditions: `=== -1` and `&gt; -1`</span>
-array.indexOf(i) &gt;= <span class="hljs-number">-1</span>
+<span class="pl-c">// two boolean conditions: `=== 0` and `&gt; 0`</span>
+array.indexOf(i) &gt;= <span class="hljs-number">0</span>
 
 <span class="pl-c">// fast</span>
 <span class="pl-c">// just one boolean condition: `!== -1`</span>
