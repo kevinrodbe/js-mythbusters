@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../assets/style.css?t=89c89900">
-    <link rel="stylesheet" href="../css/build.css?t=59ce937b">
+    <link rel="stylesheet" href="../css/build.css?t=ec07b15d">
     <script src="../js/main.js?t=714bcb68"></script>
     <script src="../assets/script.js?t=7ed45746"></script>
     <title>Inline initialization - JS MythBusters_</title>
@@ -148,16 +148,16 @@ array[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>
 <p>Because in the first piece of code you are accessing an element that doesn&#x2019;t exist in the array, and in this case the specs says that it wants to return <code>undefined</code> that later is converted into <code>0</code>, so you need to do this extra effort simply to compare with <code>0</code>.</p>
 <p>Maybe for that you could be a interest for you use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill"><code>Array.prototype.fill()</code></a>.</p>
 
-          <div id="disqus_thread"></div>
-          <script>var disqus_shortname = 'mythbusters-js-org';
-            (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </div>
+        <div id="disqus_thread"></div>
+        <script>var disqus_shortname = 'mythbusters-js-org';
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <div class="footer-nav">
           <div class="left"><a href="../v8-tips/float-number.html"><span class="title">Float Number</span></a></div>
           <div class="right"><a href="../v8-tips/monomorphic.html"><span class="label">Next: </span><span class="title">Monomorphic</span></a></div>

@@ -448,8 +448,9 @@
     "string/concat.md": "string/concat.html",
     "assets/css/build.css": "css/build.css",
     "assets/js/main.js": "js/main.js",
+    "assets/scss/_comments.scss": "scss/_comments.scss",
+    "assets/scss/_markdown.scss": "scss/_markdown.scss",
     "assets/scss/_mobile.scss": "scss/_mobile.scss",
-    "assets/scss/_style.scss": "scss/_style.scss",
     "assets/scss/_variables.scss": "scss/_variables.scss",
     "assets/scss/main.scss": "scss/main.scss"
   }
