@@ -120,18 +120,18 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="freeing-memory-by-assigning-null">Freeing memory by assigning <code>null</code></h1>
-<p>If you want to delete a property of a <code>Object</code> uses:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
+<p>If you want to delete a property of an <code>Object</code>, set the property to <code>null</code>:</p>
+<pre><code class="lang-js"><span class="pl-c">// Inefficent way (Bad)</span>
+<span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
+<span class="pl-k">delete</span> foo.bar
+
+<span class="pl-c">// Efficent way (Good)</span>
+<span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
 foo.bar = <span class="pl-c1">null</span>
 </code></pre>
-<p>Instead of:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
-<span class="pl-k">delete</span> foo.bar
-</code></pre>
 <p>If you want do delete the <code>Object</code> entirely, then simply <code>foo = null</code>.</p>
-<p>Garbage Collector are interested in <code>Object</code>&apos;s that are not referenced by any other <code>Object</code>.</p>
-<p>On the other hand, JavaScript engines can detect such <em>hot</em> <code>Object</code>&apos;s and attempt to optimize them.</p>
-<p>This is easier if the <code>Object</code>&apos;s structure doesn&#x2019;t heavily change over its lifetime and delete can trigger such changes.</p>
+<p>Garbage Collector is interested in <code>Object</code>&apos;s that are not referenced by any other <code>Object</code>. On the other hand, JavaScript engines can detect such <em>hot</em> <code>Object</code>&apos;s and attempt to optimize them.</p>
+<p>This is easier if the <code>Object</code>&apos;s structure doesn&#x2019;t heavily change over its lifetime. Using <code>delete</code> can trigger such changes.</p>
 <p>This also is applicable to <code>Array</code>.</p>
 
         </div>
