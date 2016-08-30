@@ -9,13 +9,9 @@
     color: $white;
     background: $special-text-color;
   }
-}
 
-html .toc-menu,
-body {
   @include scrollbar;
 }
-
 
 /*
  * Update fonts
