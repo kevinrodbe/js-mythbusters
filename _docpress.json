@@ -8,6 +8,12 @@
         "slug": "index",
         "sections": [
           {
+            "title": "Send your tip!",
+            "source": "contributing.md",
+            "url": "contributing.html",
+            "slug": "contributing"
+          },
+          {
             "title": "Bibliography",
             "source": "bibliography.md",
             "url": "bibliography.html",
@@ -231,6 +237,12 @@
       "pageTitle": "JS MythBusters_",
       "slug": "index"
     },
+    "contributing.html": {
+      "source": "contributing.md",
+      "title": "Send your tip! - JS MythBusters_",
+      "pageTitle": "Send your tip!",
+      "slug": "contributing"
+    },
     "bibliography.html": {
       "source": "bibliography.md",
       "title": "Bibliography - JS MythBusters_",
@@ -407,6 +419,7 @@
   },
   "sources": {
     "README.md": "index.html",
+    "contributing.md": "contributing.html",
     "bibliography.md": "bibliography.html",
     "resources.md": "resources.html",
     "workflow/boolean-conditions.md": "workflow/boolean-conditions.html",
