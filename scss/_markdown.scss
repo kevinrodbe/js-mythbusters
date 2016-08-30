@@ -11,9 +11,8 @@
   }
 }
 
-
-*,
-html .toc-menu {
+html .toc-menu,
+body {
   @include scrollbar;
 }
 
