@@ -124,7 +124,7 @@
 <p>However, They&#x2019;re usually overkill when you are merely searching for literal strings:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> endsWithSemiColon = <span class="hljs-regexp">/;$/</span>.test(str)
 </code></pre>
-<p>Each time a semicolon is found, the <code>RegExp</code> advances to the next token (<code>$</code>), which checks wheter the match is at the end of the string. If not, the <code>RegExp</code> continues searching for a match until it finally makes its way throough the entire string.</p>
+<p>Each time a semicolon is found, the <code>RegExp</code> advances to the next token (<code>$</code>), which checks wheter the match is at the end of the string. If not, the <code>RegExp</code> continues searching for a match until it finally makes its way through the entire string.</p>
 <p>In this case, a better approach is to skip all the intermediate steps required by a <code>RegExp</code> and simply check whether the last character is a semicolon:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> endsWithSemiColon = str.charAt(str.length - <span class="hljs-number">1</span>) === <span class="pl-s">&apos;;&apos;</span>
 </code></pre>
