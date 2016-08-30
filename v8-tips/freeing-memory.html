@@ -128,7 +128,7 @@ foo.bar = <span class="pl-c1">null</span>
 <pre><code class="lang-js"><span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
 <span class="pl-k">delete</span> foo.bar
 </code></pre>
-<p>If you want do delete the <code>Object</code> enterely, then simply <code>foo = null</code>.</p>
+<p>If you want do delete the <code>Object</code> entirely, then simply <code>foo = null</code>.</p>
 <p>Garbage Collector are interested in <code>Object</code>&apos;s that are not referenced by any other <code>Object</code>.</p>
 <p>On the other hand, JavaScript engines can detect such <em>hot</em> <code>Object</code>&apos;s and attempt to optimize them.</p>
 <p>This is easier if the <code>Object</code>&apos;s structure doesn&#x2019;t heavily change over its lifetime and delete can trigger such changes.</p>
