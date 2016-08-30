@@ -3,16 +3,20 @@
  */
 
 * {
-
   @include font-smoothing(antialiased);
 
   @include selection {
     color: $white;
     background: $special-text-color;
   }
+}
 
+
+*,
+html .toc-menu {
   @include scrollbar;
 }
+
 
 /*
  * Update fonts
@@ -434,7 +438,7 @@ html .markdown-body table td {
 
 html .markdown-body table td,
 html .markdown-body table th {
-  border-color: $gray-darkest;
+  border-color: $pre-border-color;
 }
 
 /**
