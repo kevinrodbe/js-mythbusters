@@ -31,12 +31,6 @@
         "title": "Workflow",
         "sections": [
           {
-            "title": "Boolean condition",
-            "source": "workflow/boolean-conditions.md",
-            "url": "workflow/boolean-conditions.html",
-            "slug": "workflowboolean-conditions"
-          },
-          {
             "title": "Lookup table",
             "source": "workflow/lookup-table.md",
             "url": "workflow/lookup-table.html",
@@ -255,12 +249,6 @@
       "pageTitle": "Resources",
       "slug": "resources"
     },
-    "workflow/boolean-conditions.html": {
-      "source": "workflow/boolean-conditions.md",
-      "title": "Boolean condition - JS MythBusters_",
-      "pageTitle": "Boolean condition",
-      "slug": "workflowboolean-conditions"
-    },
     "workflow/lookup-table.html": {
       "source": "workflow/lookup-table.md",
       "title": "Lookup table - JS MythBusters_",
@@ -422,7 +410,6 @@
     "contributing.md": "contributing.html",
     "bibliography.md": "bibliography.html",
     "resources.md": "resources.html",
-    "workflow/boolean-conditions.md": "workflow/boolean-conditions.html",
     "workflow/lookup-table.md": "workflow/lookup-table.html",
     "workflow/math.md": "workflow/math.html",
     "workflow/memoization.md": "workflow/memoization.html",
