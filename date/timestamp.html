@@ -125,9 +125,9 @@
 <li><code>Date.now()</code></li>
 <li><code>new.Date().getTime()</code></li>
 </ul>
-<p>Althought <code>Date.now()</code> and <code>new.Date()</code> have the same behavior, <code>Date.now</code> is faster because you are not allocating and object and then calling the method of the object.</p>
+<p>Althought <code>Date.now()</code> and <code>new.Date()</code> have the same behavior, <code>Date.now()</code> is faster because you are not allocating and object and then calling the method of the object.</p>
 <p>This is specially remarkable when you make sucesive calls (for example, when you append timestamps in logs).</p>
-<p>Another thing to be considered is the fact that, when you create a <code>new Date</code> you are linking a moment of the time with the object. Sucesive calls to <code>.getTime</code> have the same output.</p>
+<p>Another thing to be considered is the fact that, when you create a <code>new Date()</code> you are linking a moment of the time with the object. Sucesive calls to <code>.getTime()</code> have the same output.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> time = <span class="pl-k">new</span> <span class="pl-c1">Date</span>()
 time.getTime() <span class="pl-c">// =&gt; 1472153262516</span>
 time.getTime() <span class="pl-c">// =&gt; 1472153262516</span>
