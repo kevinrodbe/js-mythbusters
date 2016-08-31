@@ -138,7 +138,7 @@
 <span class="pl-k">var</span> sayMonday = sayHello.bind(<span class="pl-c1">null</span>, day)
 
 sayMonday(<span class="pl-s">&apos;Kiko&apos;</span>)
-<span class="pl-c">// =&gt; &apos;Hello Kiko, have a good monday&apos;</span>
+<span class="pl-c">// =&gt; &apos;Hello Kiko, have a good Monday&apos;</span>
 </code></pre>
 <p>The real thing that you need is a <em>partial function</em>. The implementation depends of the library that you use but normally it&#x2019;s more faster than <code>.bind</code>:</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greet</span> (<span class="hljs-params">greeting, name</span>) </span>{
