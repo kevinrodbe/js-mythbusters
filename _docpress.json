@@ -215,7 +215,7 @@
         "title": "String",
         "sections": [
           {
-            "title": "+= for concat",
+            "title": "Interpolating variables",
             "source": "string/concat.md",
             "url": "string/concat.html",
             "slug": "stringconcat"
@@ -400,8 +400,8 @@
     },
     "string/concat.html": {
       "source": "string/concat.md",
-      "title": "+= for concat - JS MythBusters_",
-      "pageTitle": "+= for concat",
+      "title": "Interpolating variables - JS MythBusters_",
+      "pageTitle": "Interpolating variables",
       "slug": "stringconcat"
     }
   },
@@ -434,12 +434,12 @@
     "regexp/methods.md": "regexp/methods.html",
     "string/concat.md": "string/concat.html",
     "assets/css/build.css": "css/build.css",
+    "assets/js/main.js": "js/main.js",
     "assets/scss/_comments.scss": "scss/_comments.scss",
     "assets/scss/_markdown.scss": "scss/_markdown.scss",
     "assets/scss/_mixins.scss": "scss/_mixins.scss",
     "assets/scss/_mobile.scss": "scss/_mobile.scss",
     "assets/scss/_variables.scss": "scss/_variables.scss",
-    "assets/scss/main.scss": "scss/main.scss",
-    "assets/js/main.js": "js/main.js"
+    "assets/scss/main.scss": "scss/main.scss"
   }
 }
