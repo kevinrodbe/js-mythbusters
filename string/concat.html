@@ -118,9 +118,28 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="use-+-for-concat">Use <code>+=</code> for concat</h1>
-<p>Instead of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/concat">String.prototype.concat()</a>.</p>
-<p>The reason is that this way to concat is more primitive and need less wrapping around the <code>String</code> object.</p>
-<p>Check <a href="https://jsperf.com/concat-vs-plus-vs-join">test#1</a> and <a href="https://jsperf.com/string-concat-fast/17">test#2</a> benchmarks.</p>
+<p>Creating an <code>String</code> interpolating variables always was a pain.</p>
+<p>The solution that have <a href="https://jsperf.com/concat-vs-plus-vs-join">more</a> <a href="https://jsperf.com/string-concat-fast/17">perfomance</a> is using <code>+=</code> operator:</p>
+<pre><code class="lang-js">
+<span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="pl-k">var</span> message = <span class="pl-s">&apos;&apos;</span>
+  message += <span class="pl-s">&apos;Hello &apos;</span>
+  message += name
+  message += <span class="pl-s">&apos;, how are you?&apos;</span>
+  <span class="pl-k">return</span> message
+}
+
+<span class="pl-k">var</span> sayHello = greetings(<span class="pl-s">&apos;Kiko&apos;</span>)
+<span class="pl-c1">console</span>.log(sayHello) <span class="pl-c">// =&gt; &apos;Hello Kiko, how are you?&apos;</span>
+</code></pre>
+<p>However, nowadays is totally recommended (less code and good perfomance) use template string for this purpose:</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span>(<span class="hljs-params">name</span>) </span>{
+  <span class="pl-k">return</span> <span class="pl-s">`Hello <span class="hljs-subst">${name}</span>, how are you?`</span>
+}
+
+<span class="pl-k">var</span> sayHello = greetings(<span class="pl-s">&apos;Kiko&apos;</span>)
+<span class="pl-c1">console</span>.log(sayHello) <span class="pl-c">// =&gt; &apos;Hello Kiko, how are you?&apos;</span>
+</code></pre>
 
         </div>
         <div id="disqus_thread"></div>

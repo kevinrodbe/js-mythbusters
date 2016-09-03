@@ -119,16 +119,16 @@
         </div>
         <div class="markdown-body"><h1 id="memoization:-cache-successive-calls.">Memoization: Cache successive calls.</h1>
 <p>Just calculate the value of something once, and reuse the value avoiding the cost of recalculate the same value.</p>
-<p>If you need to control of a set of tiny values, you can use an object:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> cache = {}
+<p>If you need to control of a set of tiny values, you can use an <code>Map</code>:</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> cache = <span class="pl-k">new</span> <span class="pl-c1">Map</span>()
+
 <span class="pl-k">var</span> cityOne = <span class="pl-s">&apos;Murcia&apos;</span>
 <span class="pl-k">var</span> cityTwo = <span class="pl-s">&apos;Madrid&apos;</span>
-<span class="pl-k">var</span> routeName = cityOne + <span class="pl-s">&apos;-&apos;</span> +  cityTwo
+<span class="pl-k">var</span> routeName = <span class="pl-s">`<span class="hljs-subst">${cityOne}</span><span class="hljs-subst">${cityTwo}</span>`</span>
 
-<span class="pl-k">if</span> (!cache[routeName]) cache[routeName] = getDistance(cityOne, cityTwo)
-<span class="pl-k">return</span> cache[routeName]
+<span class="pl-k">if</span> (!cache.has(routeName)) cache.set(routeName, getDistance(cityOne, cityTwo))
 </code></pre>
-<p>If you actually don&#x2019;t know how your cache could grow in memory, be careful. You need a little more sophisticated way as <a href="https://www.npmjs.com/package/lru-cache">lru-cache</a> to control it.</p>
+<p>A little complex but better solution will be control the size of the <code>Map</code>, as LRU cache.</p>
 
         </div>
         <div id="disqus_thread"></div>

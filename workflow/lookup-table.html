@@ -126,7 +126,8 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="lookup-table-for-result-matching">Lookup table for result matching</h1>
-<p>When optimizing <code>if</code>/<code>else</code>, minimize the number of conditions to evaluate. This applies to <code>switch</code> cases as well. The easiest optimization is to ensure that the most common conditions are first:</p>
+<p>When optimizing <code>if</code>/<code>else</code>, minimize the number of conditions to evaluate. This applies to <code>switch</code> cases as well.</p>
+<p>The easiest optimization is to ensure that the most common conditions are first:</p>
 <pre><code class="lang-js"><span class="pl-k">if</span> (value &lt; <span class="hljs-number">5</span>) {
   <span class="pl-c">// most frequency case</span>
 } <span class="pl-k">else</span> <span class="pl-k">if</span> (value &gt; <span class="hljs-number">5</span> &amp;&amp; value &lt; <span class="hljs-number">10</span>) {
@@ -147,14 +148,13 @@
 
 lookupTable[compare(<span class="hljs-number">4</span>, myValue)]
 </code></pre>
-<p>In objects, you may also use <code>undefined</code> or <code>&apos;&apos;</code> as keys.</p>
+<p>In objects, you may also use <em>falsy</em> values as keys.</p>
 <h2 id="array-vs.-object">Array vs. Object</h2>
 <p>Also be careful about choose between <code>Object</code> or <code>Array</code> for this purpose:</p>
 <ul>
 <li>If you need a incremental index, use <code>Array</code>.</li>
 <li>In other cases, use <code>Object</code>.</li>
 </ul>
-<p>In ES2015, also consider using <code>Map</code> or <code>Set</code> combined with <code>Symbol</code>.</p>
 <h2 id="caveats">Caveats</h2>
 <p>Although is more readable, using a lookup table isn&#x2019;t always better. The cost of creating the lookup table could be higher than the use set of <code>if</code>/<code>else</code> statements. So, it depends about your code running time:</p>
 <ul>
