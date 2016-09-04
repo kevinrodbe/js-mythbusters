@@ -137,7 +137,7 @@
 }
 </code></pre>
 <h2 id="index-lookups">Index lookups</h2>
-<p>It&#x2019;s sometimes better to use a direct match approach using object/array index lookups:</p>
+<p>It&#x2019;s better to use a direct match approach using object/array index lookups:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> lookupTable = {
   <span class="pl-s">&apos;1&apos;</span>: <span class="pl-s">&apos;is greater&apos;</span>,
   <span class="pl-s">&apos;-1&apos;</span>: <span class="pl-s">&apos;is less&apos;</span>,
@@ -150,16 +150,16 @@ lookupTable[compare(<span class="hljs-number">4</span>, myValue)]
 </code></pre>
 <p>In objects, you may also use <em>falsy</em> values as keys.</p>
 <h2 id="array-vs.-object">Array vs. Object</h2>
-<p>Be careful about choosing between <code>Object</code> or <code>Array</code>:</p>
+<p>Also be careful about choose between <code>Object</code> or <code>Array</code> for this purpose:</p>
 <ul>
 <li>If you need a incremental index, use <code>Array</code>.</li>
 <li>In other cases, use <code>Object</code>.</li>
 </ul>
 <h2 id="caveats">Caveats</h2>
-<p>Although is more readable, using a lookup table isn&#x2019;t always better. The cost of creating the lookup table could be higher than using a set of <code>if</code>/<code>else</code> statements. So, it depends on your code:</p>
+<p>Although is more readable, using a lookup table isn&#x2019;t always better. The cost of creating the lookup table could be higher than the use set of <code>if</code>/<code>else</code> statements. So, it depends about your code running time:</p>
 <ul>
-<li>If you have to handle a small set of conditions (maybe less than 3) or the code runtime life is short, use <code>if</code>/<code>else</code>.</li>
-<li>In other cases, use a lookup table.</li>
+<li>If you have to handle a small set of conditions (maybe less than 3) or the code running life is short, use <code>if</code>/<code>else</code>.</li>
+<li>In other cases, use the lookup table solution.</li>
 </ul>
 
         </div>
