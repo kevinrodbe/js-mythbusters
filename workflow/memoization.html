@@ -118,8 +118,8 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="memoization:-cache-successive-calls.">Memoization: Cache successive calls.</h1>
-<p>Just calculate the value of something once, and reuse the value avoiding the cost of recalculate the same value.</p>
-<p>If you need to control of a set of tiny values, you can use an <code>Map</code>:</p>
+<p>Just calculate the value of something once and reuse the value. This avoids the cost of recalculating the same value.</p>
+<p>If you need to control a set of small values, you can use a <code>Map</code>:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> cache = <span class="pl-k">new</span> <span class="pl-c1">Map</span>()
 
 <span class="pl-k">var</span> cityOne = <span class="pl-s">&apos;Murcia&apos;</span>
@@ -128,7 +128,7 @@
 
 <span class="pl-k">if</span> (!cache.has(routeName)) cache.set(routeName, getDistance(cityOne, cityTwo))
 </code></pre>
-<p>A little complex but better solution will be control the size of the <code>Map</code>, as LRU cache.</p>
+<p>A more complex, but better solution, would be to control the size of the <code>Map</code>. One example would be to use an LRU cache.</p>
 
         </div>
         <div id="disqus_thread"></div>
