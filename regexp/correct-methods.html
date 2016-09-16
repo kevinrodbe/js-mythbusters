@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/build.css?t=2db5e505">
     <script src="../js/main.js?t=144020c5"></script>
     <script src="../assets/script.js?t=7ed45746"></script>
-    <title>Common sense - JS MythBusters_</title>
+    <title>Correct method - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -94,11 +94,11 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title -active link-regexpcommon-sense" href="../regexp/common-sense.html">Common sense</a>
+                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title -active link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
-                </li>
-                <li class="menu-item -level-2"><a class="link title  link-regexpmethods" href="../regexp/methods.html">Correct method</a>
                 </li>
               </ul>
             </li>
@@ -111,22 +111,21 @@
           </ul>
         </li>
       </div>
-      <div class="body page-regexpcommon-sense">
+      <div class="body page-regexpcorrect-methods">
         <div class="header-nav">
           <div class="right"><a class="iconlink" href="https://github.com/Kikobeats/js-mythbusters" data-title="Kikobeats/js-mythbusters">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="use-regexp-in-cases-with-sense">Use RegExp in cases with sense</h1>
-<p>When use with care, <code>RegExp</code> are fast.</p>
-<p>However, They&#x2019;re usually overkill when you are merely searching for literal strings:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> endsWithSemiColon = <span class="hljs-regexp">/;$/</span>.test(str)
-</code></pre>
-<p>Each time a semicolon is found, the <code>RegExp</code> advances to the next token (<code>$</code>), which checks wheter the match is at the end of the string. If not, the <code>RegExp</code> continues searching for a match until it finally makes its way through the entire string.</p>
-<p>In this case, a better approach is to skip all the intermediate steps required by a <code>RegExp</code> and simply check whether the last character is a semicolon:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> endsWithSemiColon = str.charAt(str.length - <span class="hljs-number">1</span>) === <span class="pl-s">&apos;;&apos;</span>
-</code></pre>
-<p>This is just a bit faster than the regex-based test with small target strings, but, more importantly, the string&#x2019;s length no longer affects the time needed to perfom the test.</p>
+        <div class="markdown-body"><h1 id="use-the-correct-regexp-method">Use the correct <code>RegExp</code> method</h1>
+<p>In general terms:</p>
+<ul>
+<li>Use <code>.test</code> if you want a faster boolean check.</li>
+<li>Use <code>.match</code> to retrieve all matches when using the g global flag.</li>
+</ul>
+<blockquote>
+<p>It&#x2019;s possible that you can gain an extra of perfomance using String method to match <code>RegExp</code> instead of RegExp to match String. It&#x2019;s depends of your case of use and of your JavaScript Engine. Check <a href="https://jsperf.com/regexp-test-search-vs-indexof/12">test#1</a>, <a href="https://jsperf.com/regex-methods-x-1/2">test#2</a> &amp; <a href="https://jsperf.com/test-vs-indexof-fast/5">test#3</a> benchmarks.</p>
+</blockquote>
 
         </div>
         <div id="disqus_thread"></div>
@@ -139,7 +138,7 @@
         </script>
         <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <div class="footer-nav">
-          <div class="left"><a href="../function/bind.html"><span class="title">.bind is slower</span></a></div>
+          <div class="left"><a href="../regexp/declaring-instances.html"><span class="title">Declaring instances</span></a></div>
           <div class="right"><a href="../regexp/fail-faster.html"><span class="label">Next: </span><span class="title">Focus on failing faster</span></a></div>
         </div>
       </div>

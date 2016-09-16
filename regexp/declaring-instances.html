@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/build.css?t=2db5e505">
     <script src="../js/main.js?t=144020c5"></script>
     <script src="../assets/script.js?t=7ed45746"></script>
-    <title>Correct method - JS MythBusters_</title>
+    <title>Declaring instances - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -94,11 +94,11 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpcommon-sense" href="../regexp/common-sense.html">Common sense</a>
+                <li class="menu-item -level-2"><a class="link title -active link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
+                </li>
+                <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
-                </li>
-                <li class="menu-item -level-2"><a class="link title -active link-regexpmethods" href="../regexp/methods.html">Correct method</a>
                 </li>
               </ul>
             </li>
@@ -111,24 +111,25 @@
           </ul>
         </li>
       </div>
-      <div class="body page-regexpmethods">
+      <div class="body page-regexpdeclaring-instances">
         <div class="header-nav">
           <div class="right"><a class="iconlink" href="https://github.com/Kikobeats/js-mythbusters" data-title="Kikobeats/js-mythbusters">
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="use-the-correct-regexp-method">Use the correct <code>RegExp</code> method</h1>
-<p>First, always save the <code>RegExp</code> expression in a variable as:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> reContains = <span class="hljs-regexp">/(?:^| )foo(?: |$)/</span>
+        <div class="markdown-body"><h1 id="declaring-instances">Declaring instances</h1>
+<p>Doesn&#x2019;t matter if you use <strong>constructor</strong></p>
+<pre><code class="lang-js"><span class="pl-k">const</span> reUsername = <span class="hljs-regexp">/^[a-zA-Z0-9]+$/g</span>
 </code></pre>
-<p>Second, in general terms:</p>
-<ul>
-<li>Use <code>.test</code> if you want a faster boolean check.</li>
-<li>Use <code>.match</code> to retrieve all matches when using the g global flag.</li>
-</ul>
+<p>or <strong>expression literal</strong></p>
+<pre><code class="lang-js"><span class="pl-k">const</span> reUsername = <span class="pl-c1">RegExp</span>(<span class="pl-s">&apos;^[a-zA-Z0-9]+$&apos;</span>, <span class="pl-s">&apos;g&apos;</span>)
+</code></pre>
+<p>The important thing is store it into a variable to make it reusable.</p>
+<p>As you can see I don&#x2019;t use <code>new</code> because it is unnecessary. According with <a href="http://www.ecma-international.org/ecma-262/6.0/#sec-regexp-constructor">ECMAScript</a>:</p>
 <blockquote>
-<p>It&#x2019;s possible that you can gain an extra of perfomance using String method to match <code>RegExp</code> instead of RegExp to match String. It&#x2019;s depends of your case of use and of your JavaScript Engine. Check <a href="https://jsperf.com/regexp-test-search-vs-indexof/12">test#1</a>, <a href="https://jsperf.com/regex-methods-x-1/2">test#2</a> &amp; <a href="https://jsperf.com/test-vs-indexof-fast/5">test#3</a> benchmarks.</p>
+<p>The RegExp constructor is the %RegExp% intrinsic object and the initial value of the RegExp property of the global object. When RegExp is called as a function rather than as a constructor, it creates and initializes a new RegExp object. Thus the function call RegExp(&#x2026;) is equivalent to the object creation expression new RegExp(&#x2026;) with the same arguments.</p>
 </blockquote>
+<p><em>Another reason for hate <code>new</code>, right?</em></p>
 
         </div>
         <div id="disqus_thread"></div>
@@ -141,8 +142,8 @@
         </script>
         <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <div class="footer-nav">
-          <div class="left"><a href="../regexp/fail-faster.html"><span class="title">Focus on failing faster</span></a></div>
-          <div class="right"><a href="../string/concat.html"><span class="label">Next: </span><span class="title">Interpolating variables</span></a></div>
+          <div class="left"><a href="../function/bind.html"><span class="title">.bind is slower</span></a></div>
+          <div class="right"><a href="../regexp/correct-methods.html"><span class="label">Next: </span><span class="title">Correct method</span></a></div>
         </div>
       </div>
     </div>

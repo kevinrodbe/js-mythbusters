@@ -192,22 +192,22 @@
         "title": "RegExp",
         "sections": [
           {
-            "title": "Common sense",
-            "source": "regexp/common-sense.md",
-            "url": "regexp/common-sense.html",
-            "slug": "regexpcommon-sense"
+            "title": "Declaring instances",
+            "source": "regexp/declaring-instances.md",
+            "url": "regexp/declaring-instances.html",
+            "slug": "regexpdeclaring-instances"
+          },
+          {
+            "title": "Correct method",
+            "source": "regexp/correct-methods.md",
+            "url": "regexp/correct-methods.html",
+            "slug": "regexpcorrect-methods"
           },
           {
             "title": "Focus on failing faster",
             "source": "regexp/fail-faster.md",
             "url": "regexp/fail-faster.html",
             "slug": "regexpfail-faster"
-          },
-          {
-            "title": "Correct method",
-            "source": "regexp/methods.md",
-            "url": "regexp/methods.html",
-            "slug": "regexpmethods"
           }
         ]
       },
@@ -380,23 +380,23 @@
       "pageTitle": ".bind is slower",
       "slug": "functionbind"
     },
-    "regexp/common-sense.html": {
-      "source": "regexp/common-sense.md",
-      "title": "Common sense - JS MythBusters_",
-      "pageTitle": "Common sense",
-      "slug": "regexpcommon-sense"
+    "regexp/declaring-instances.html": {
+      "source": "regexp/declaring-instances.md",
+      "title": "Declaring instances - JS MythBusters_",
+      "pageTitle": "Declaring instances",
+      "slug": "regexpdeclaring-instances"
+    },
+    "regexp/correct-methods.html": {
+      "source": "regexp/correct-methods.md",
+      "title": "Correct method - JS MythBusters_",
+      "pageTitle": "Correct method",
+      "slug": "regexpcorrect-methods"
     },
     "regexp/fail-faster.html": {
       "source": "regexp/fail-faster.md",
       "title": "Focus on failing faster - JS MythBusters_",
       "pageTitle": "Focus on failing faster",
       "slug": "regexpfail-faster"
-    },
-    "regexp/methods.html": {
-      "source": "regexp/methods.md",
-      "title": "Correct method - JS MythBusters_",
-      "pageTitle": "Correct method",
-      "slug": "regexpmethods"
     },
     "string/concat.html": {
       "source": "string/concat.md",
@@ -429,18 +429,18 @@
     "error/try-catch.md": "error/try-catch.html",
     "function/new.md": "function/new.html",
     "function/bind.md": "function/bind.html",
-    "regexp/common-sense.md": "regexp/common-sense.html",
+    "regexp/declaring-instances.md": "regexp/declaring-instances.html",
+    "regexp/correct-methods.md": "regexp/correct-methods.html",
     "regexp/fail-faster.md": "regexp/fail-faster.html",
-    "regexp/methods.md": "regexp/methods.html",
     "string/concat.md": "string/concat.html",
     "assets/css/build.css": "css/build.css",
-    "assets/js/main.js": "js/main.js",
-    "assets/scss/_changelog.scss": "scss/_changelog.scss",
     "assets/scss/_comments.scss": "scss/_comments.scss",
+    "assets/scss/_changelog.scss": "scss/_changelog.scss",
     "assets/scss/_markdown.scss": "scss/_markdown.scss",
     "assets/scss/_mixins.scss": "scss/_mixins.scss",
     "assets/scss/_mobile.scss": "scss/_mobile.scss",
+    "assets/scss/main.scss": "scss/main.scss",
     "assets/scss/_variables.scss": "scss/_variables.scss",
-    "assets/scss/main.scss": "scss/main.scss"
+    "assets/js/main.js": "js/main.js"
   }
 }
