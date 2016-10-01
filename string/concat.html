@@ -121,7 +121,7 @@
 <p>Creating an <code>String</code> interpolating variables always was a pain.</p>
 <p>The solution that have <a href="https://jsperf.com/concat-vs-plus-vs-join">more</a> <a href="https://jsperf.com/string-concat-fast/17">perfomance</a> is using <code>+=</code> operator:</p>
 <pre><code class="lang-js">
-<span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span>(<span class="hljs-params">name</span>) </span>{
+<span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span> (<span class="hljs-params">name</span>) </span>{
   <span class="pl-k">var</span> message = <span class="pl-s">&apos;&apos;</span>
   message += <span class="pl-s">&apos;Hello &apos;</span>
   message += name
@@ -133,7 +133,7 @@
 <span class="pl-c1">console</span>.log(sayHello) <span class="pl-c">// =&gt; &apos;Hello Kiko, how are you?&apos;</span>
 </code></pre>
 <p>However, nowadays is totally recommended (less code and good perfomance) use template string for this purpose:</p>
-<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span>(<span class="hljs-params">name</span>) </span>{
+<pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span> (<span class="hljs-params">name</span>) </span>{
   <span class="pl-k">return</span> <span class="pl-s">`Hello <span class="hljs-subst">${name}</span>, how are you?`</span>
 }
 
