@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=89c89900">
-    <link rel="stylesheet" href="../css/build.css?t=2db5e505">
+    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
+    <link rel="stylesheet" href="../css/build.css?t=a00db19e">
     <script src="../js/main.js?t=144020c5"></script>
     <script src="../assets/script.js?t=7ed45746"></script>
     <title>Freeing memory - JS MythBusters_</title>
@@ -120,11 +120,11 @@
         <div class="markdown-body"><h1 id="freeing-memory-by-assigning-null">Freeing memory by assigning <code>null</code></h1>
 <p>If you want to delete a property of an <code>Object</code>, set the property to <code>null</code>:</p>
 <pre><code class="lang-js"><span class="pl-c">// Inefficent way (Bad)</span>
-<span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
+<span class="pl-k">var</span> foo = { <span class="hljs-attr">bar</span>: <span class="pl-s">&apos;hello world&apos;</span> }
 <span class="pl-k">delete</span> foo.bar
 
 <span class="pl-c">// Efficent way (Good)</span>
-<span class="pl-k">var</span> foo = { bar: <span class="pl-s">&apos;hello world&apos;</span> }
+<span class="pl-k">var</span> foo = { <span class="hljs-attr">bar</span>: <span class="pl-s">&apos;hello world&apos;</span> }
 foo.bar = <span class="pl-c1">null</span>
 </code></pre>
 <p>If you want do delete the <code>Object</code> entirely, then simply <code>foo = null</code>.</p>

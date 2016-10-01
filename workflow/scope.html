@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=89c89900">
-    <link rel="stylesheet" href="../css/build.css?t=2db5e505">
+    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
+    <link rel="stylesheet" href="../css/build.css?t=a00db19e">
     <script src="../js/main.js?t=144020c5"></script>
     <script src="../assets/script.js?t=7ed45746"></script>
     <title>Scope - JS MythBusters_</title>
@@ -124,7 +124,7 @@
 <p><strong>Continue reading: ES2015 tips</strong></p>
 <p>Notes that with ES2015, you can use <code>const</code> and <code>let</code> as well.</p>
 <p><code>const</code> means that the variable can&#x2019;t be reassigned. (Not to be confused with immutable values. Unlike true immutable datatypes such as those produced by Immutable.js and Mori, a <code>const</code> object can have properties mutated.):</p>
-<pre><code class="lang-js"><span class="pl-k">const</span> objt = { foo: <span class="pl-s">&apos;bar&apos;</span> }
+<pre><code class="lang-js"><span class="pl-k">const</span> objt = { <span class="hljs-attr">foo</span>: <span class="pl-s">&apos;bar&apos;</span> }
 
 objt = {}
 <span class="pl-c1">console</span>.log(objt) <span class="pl-c">// =&gt; = { foo: &apos;bar&apos; }</span>
