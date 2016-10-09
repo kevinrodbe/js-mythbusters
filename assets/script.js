@@ -1,9 +1,7 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* eslint-disable no-new */
 var Pjax = require('pjax')
 var Nprogress = require('nprogress')
 var onmount = require('onmount')
-var each = require('dom101/each')
 var toggleClass = require('dom101/toggle-class')
 var ready = require('dom101/ready')
 var Scrolltrack = require('./scrolltrack')
@@ -15,7 +13,7 @@ var Scrollclass = require('./scrollclass')
 
 void (function () {
   ready(function () {
-    new Pjax({
+    new Pjax({ // eslint-disable-line
       selectors: ['.body', '.toc-menu', 'title'],
       analytics: sendPageview
     })
@@ -120,7 +118,7 @@ void (function () {
   })
 }())
 
-},{"./scrollclass":2,"./scrolltrack":3,"dom101/each":8,"dom101/ready":10,"dom101/toggle-class":13,"nprogress":14,"onmount":15,"pjax":16}],2:[function(require,module,exports){
+},{"./scrollclass":2,"./scrolltrack":3,"dom101/ready":10,"dom101/toggle-class":13,"nprogress":14,"onmount":15,"pjax":16}],2:[function(require,module,exports){
 var debounce = require('debounce')
 var documentHeight = require('dom101/document-height')
 var toggleClass = require('dom101/toggle-class')
@@ -370,7 +368,6 @@ Scrolltrack.prototype.scrollTop = function () {
 
   return y + offset
 }
-
 
 /**
  * Updates the selected link.
