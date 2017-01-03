@@ -121,7 +121,8 @@
 <span class="pl-k">var</span> cityOne = <span class="pl-s">&apos;Murcia&apos;</span>
 <span class="pl-k">var</span> cityTwo = <span class="pl-s">&apos;Madrid&apos;</span>
 <span class="pl-k">var</span> routeName = <span class="pl-s">`<span class="hljs-subst">${cityOne}</span><span class="hljs-subst">${cityTwo}</span>`</span>
-<span class="pl-k">if</span> (!cache.has(routeName)) cache.set(routeName, getDistance(cityOne, cityTwo))
+
+<span class="pl-k">if</span> (!cache[routeName]) cache[routeName] = getDistance(cityOne, cityTwo)
 </code></pre>
 <p>Notes that first line is <code>Object.create(null)</code>. This create a <code>Object</code> without <code>prototype</code>. because we want a pure object for be used as a Hash Table (with all the <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/prototype">prototypical method</a> missing).</p>
 <p>If you need more control about your cache, you can create it using Map or WeakMap structures. Specially use it when you want to remove items from the cache.</p>
