@@ -118,6 +118,7 @@
         <div class="markdown-body"><h1 id="memoization:-caching-successive-calls">Memoization: Caching successive calls</h1>
 <p>Just calculate the value of something once and reuse the value. This avoids the cost of recalculating the same value.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> cache = <span class="pl-c1">Object</span>.create(<span class="pl-c1">null</span>)
+
 <span class="pl-k">var</span> cityOne = <span class="pl-s">&apos;Murcia&apos;</span>
 <span class="pl-k">var</span> cityTwo = <span class="pl-s">&apos;Madrid&apos;</span>
 <span class="pl-k">var</span> routeName = <span class="pl-s">`<span class="hljs-subst">${cityOne}</span><span class="hljs-subst">${cityTwo}</span>`</span>
