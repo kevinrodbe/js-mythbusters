@@ -60,7 +60,7 @@
             "slug": "workflowmath"
           },
           {
-            "title": "Memoizaton",
+            "title": "Memoization",
             "source": "workflow/memoization.md",
             "url": "workflow/memoization.html",
             "slug": "workflowmemoization"
@@ -192,12 +192,6 @@
         "title": "RegExp",
         "sections": [
           {
-            "title": "Declaring instances",
-            "source": "regexp/declaring-instances.md",
-            "url": "regexp/declaring-instances.html",
-            "slug": "regexpdeclaring-instances"
-          },
-          {
             "title": "Correct method",
             "source": "regexp/correct-methods.md",
             "url": "regexp/correct-methods.html",
@@ -280,8 +274,8 @@
     },
     "workflow/memoization.html": {
       "source": "workflow/memoization.md",
-      "title": "Memoizaton - JS MythBusters_",
-      "pageTitle": "Memoizaton",
+      "title": "Memoization - JS MythBusters_",
+      "pageTitle": "Memoization",
       "slug": "workflowmemoization"
     },
     "workflow/scope.html": {
@@ -380,12 +374,6 @@
       "pageTitle": ".bind is slower",
       "slug": "functionbind"
     },
-    "regexp/declaring-instances.html": {
-      "source": "regexp/declaring-instances.md",
-      "title": "Declaring instances - JS MythBusters_",
-      "pageTitle": "Declaring instances",
-      "slug": "regexpdeclaring-instances"
-    },
     "regexp/correct-methods.html": {
       "source": "regexp/correct-methods.md",
       "title": "Correct method - JS MythBusters_",
@@ -429,7 +417,6 @@
     "error/try-catch.md": "error/try-catch.html",
     "function/new.md": "function/new.html",
     "function/bind.md": "function/bind.html",
-    "regexp/declaring-instances.md": "regexp/declaring-instances.html",
     "regexp/correct-methods.md": "regexp/correct-methods.html",
     "regexp/fail-faster.md": "regexp/fail-faster.html",
     "string/concat.md": "string/concat.html",
@@ -440,7 +427,7 @@
     "assets/scss/_markdown.scss": "scss/_markdown.scss",
     "assets/scss/_mixins.scss": "scss/_mixins.scss",
     "assets/scss/_mobile.scss": "scss/_mobile.scss",
-    "assets/scss/main.scss": "scss/main.scss",
-    "assets/scss/_variables.scss": "scss/_variables.scss"
+    "assets/scss/_variables.scss": "scss/_variables.scss",
+    "assets/scss/main.scss": "scss/main.scss"
   }
 }

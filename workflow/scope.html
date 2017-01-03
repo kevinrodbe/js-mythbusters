@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Scope - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title -active link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -117,12 +115,12 @@
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="setup-the-correct-variables-scope.">Setup the correct variables scope.</h1>
-<p>If you declare a global variable but you only use it in a little part of your code, then you are keeping in memory the variable all time but.</p>
+        <div class="markdown-body"><h1 id="setup-the-correct-scope-for-variables.">Setup the correct scope for variables.</h1>
+<p>If you declare a global variable but you only use it in a small part of your code, then you are keeping the variable in memory all the time.</p>
 <p>When a variable is referenced, Javascript hunts it down by looping through the different members of the scope chain. This scope chain is the set of variables available within the current scope, and across all major browsers it has at least two items: a set of local variables and a set of global variables.</p>
-<p>Simply put, the deeper the engine has to dig into this scope chain, the longer the operation will take. It first goes through the local variables starting with this, the function arguments, then any locally defined variables, and afterwards iterates through any global variables.</p>
+<p>Simply put, the deeper the engine has to dig into this scope chain, the longer the operation will take. It first goes through the local variables starting with <code>this</code>, the function arguments, then any locally defined variables, and afterwards it iterates through global variables.</p>
 <p><strong>Continue reading: ES2015 tips</strong></p>
-<p>Notes that with ES2015, you can use <code>const</code> and <code>let</code> as well.</p>
+<p>With ES2015, you can use <code>const</code> and <code>let</code>.</p>
 <p><code>const</code> means that the variable can&#x2019;t be reassigned. (Not to be confused with immutable values. Unlike true immutable datatypes such as those produced by Immutable.js and Mori, a <code>const</code> object can have properties mutated.):</p>
 <pre><code class="lang-js"><span class="pl-k">const</span> objt = { <span class="hljs-attr">foo</span>: <span class="pl-s">&apos;bar&apos;</span> }
 
@@ -140,8 +138,7 @@ objt.wat = <span class="pl-s">&apos;the hell&apos;</span>
 </code></pre>
 <p><code>let</code> means that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm. It also signals that the variable will be used only in the block it&#x2019;s defined in, which is not always the entire containing function.</p>
 <p><code>var</code> is now the weakest signal available when you define a variable in JavaScript. The variable may or may not be reassigned, and the variable may or may not be used for an entire function, or just for the purpose of a block or loop.</p>
-<p>You need to be reassign? then <code>let</code>, else <code>const</code>.</p>
-<p>Another important approach: If you need to deallocate a value by unsetting it, you may consider <code>let</code> over <code>const</code>.</p>
+<p>So if you need to allow the variable to be reassigned, use <code>let</code>, otherwise use <code>const</code>. Also, if you need to deallocate a value by unsetting it, you may consider <code>let</code> over <code>const</code>.</p>
 
         </div>
         <div id="disqus_thread"></div>
@@ -154,7 +151,7 @@ objt.wat = <span class="pl-s">&apos;the hell&apos;</span>
         </script>
         <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <div class="footer-nav">
-          <div class="left"><a href="../workflow/memoization.html"><span class="title">Memoizaton</span></a></div>
+          <div class="left"><a href="../workflow/memoization.html"><span class="title">Memoization</span></a></div>
           <div class="right"><a href="../workflow/variable-access.html"><span class="label">Next: </span><span class="title">Variable access</span></a></div>
         </div>
       </div>

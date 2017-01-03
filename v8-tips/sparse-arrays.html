@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Sparse Arrays - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -118,19 +116,19 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="sparse-arrays">Sparse Arrays</h1>
-<p>Internally V8 can represent <code>Array</code> following two approach:</p>
+<p>Internally, the V8 engine can represent <code>Array</code>s following one of two approaches:</p>
 <ul>
 <li><strong>Fast Elements</strong>: linear storage for compact keys sets.</li>
-<li><strong>Dictionary Elements</strong>: hash table storage otherwise (more expensive to access on runtime).</li>
+<li><strong>Dictionary Elements</strong>: hash table storage (more expensive to access on runtime).</li>
 </ul>
-<p>If you want that V8 represents your <code>Array</code> in the <code>Fast Elements</code> form, you need to have a special considerations:</p>
+<p>If you want V8 to represent your <code>Array</code> in the <code>Fast Elements</code> form, you need to take into account the following:</p>
 <ul>
 <li>Use contiguous keys starting at <code>0</code>.</li>
 <li>Don&#x2019;t pre-allocate large <code>Array</code> (e.g. <em>&gt; 64K</em> elements) that you don&#x2019;t use.</li>
-<li>Don&#x2019;t delete elements, in special in numeric <code>Array</code>&apos;s.</li>
+<li>Don&#x2019;t delete elements, specially in numeric <code>Array</code>&apos;s.</li>
 <li>Don&#x2019;t load uninitialized or deleted elements.</li>
 </ul>
-<p>Another consideration: Any name used as property name that is not a string is stringified via <code>.toString()</code>, so:</p>
+<p>Another consideration: any name used as property name that is not a string is stringified via <code>.toString()</code>, so:</p>
 <ul>
 <li><code>1</code> will be <code>&apos;1&apos;</code>.</li>
 <li><code>undefined</code> will be <code>&apos;undefined&apos;</code>.</li>

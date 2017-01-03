@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>.pop over .shift - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -120,7 +118,7 @@
         <div class="markdown-body"><h1 id="pop-over-shift">pop over shift</h1>
 <p>The <code>.shift</code> method removes the first element from an array and returns it.</p>
 <p>To remove the returned item without re-addressing the array and invalidating all references to it, <code>shift</code> requires moving the entire array around.</p>
-<p>On the other hand, <code>.pop</code> can simply subtract 1 from its length.</p>
+<p>On the other hand, <code>.pop</code> removes the last element of an <code>Array</code> by simply subtracting 1 from its length.</p>
 <p>Then <code>.shift</code> is usually much slower than <code>.pop</code>.</p>
 
         </div>

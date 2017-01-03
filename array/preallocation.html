@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Preallocation - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -118,14 +116,14 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="preallocation">Preallocation</h1>
-<p>Instead of declare a new <code>Array</code> and reserving memory for that, you can reallocate an <code>Array</code> previously declared.</p>
-<p>The thing that you need is remove the content of the array; You can do that using <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length"><code>Array.prototype.length</code></a>:</p>
+<p>Instead of declaring a new <code>Array</code> and reserving memory for it, you can reallocate an <code>Array</code> previously declared.</p>
+<p>For that, you need to remove the previous contents of the array. You can do that setting <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length"><code>Array.prototype.length</code></a> to 0:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> array = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
 
 array = [] <span class="pl-c">//  bad</span>
 array.length = <span class="hljs-number">0</span> <span class="pl-c">// good!</span>
 </code></pre>
-<p>Another good approach to use <code>.length</code> is when you know the size of your <code>Array</code>. In this case you can reserve the necessary memory space:</p>
+<p>Another good tip is to reserve the necessary memory space for your <code>Array</code> by setting its <code>.length</code> beforehand.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> array = []
 arr.length = <span class="hljs-number">5</span>
 
@@ -133,6 +131,7 @@ arr[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>
 arr[<span class="hljs-number">1</span>] = <span class="hljs-number">2</span>
 arr[<span class="hljs-number">2</span>] = <span class="hljs-number">3</span>
 </code></pre>
+<p>That useful when you want to use an <code>Array</code> as temporal data buffer. <a href="https://www.npmjs.com/package/array-list">array-list</a> is a good library for that.</p>
 
         </div>
         <div id="disqus_thread"></div>

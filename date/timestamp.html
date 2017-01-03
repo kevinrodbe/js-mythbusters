@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Creating timestamps - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -118,18 +116,19 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="creating-timestamps">Creating timestamps</h1>
-<p>Normally for create timestamps you have two ways:</p>
+<p>You have two ways of creating timestamps:</p>
 <ul>
 <li><code>Date.now()</code></li>
 <li><code>new Date().getTime()</code></li>
 </ul>
 <p>Althought <code>Date.now()</code> and <code>new Date()</code> have the same behavior, <code>Date.now()</code> is faster because you are not allocating an object and then calling the method of the object.</p>
-<p>This is specially remarkable when you make sucesive calls (for example, when you append timestamps in logs).</p>
-<p>Another thing to be considered is the fact that, when you create a <code>new Date()</code> you are linking a moment of the time with the object. Successive calls to <code>.getTime()</code> have the same output.</p>
+<p>This is specially remarkable when you make successive calls (for example, when you append timestamps in logs).</p>
+<p>Another thing to consider is the fact that, when you create a <code>new Date()</code> you are linking a specific point in time with the object. Therefore, successive calls to <code>.getTime()</code> will have the same output.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> time = <span class="pl-k">new</span> <span class="pl-c1">Date</span>()
 time.getTime() <span class="pl-c">// =&gt; 1472153262516</span>
 time.getTime() <span class="pl-c">// =&gt; 1472153262516</span>
 </code></pre>
+<p>In the browser side, consider using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">performance.now()</a>, which has better precision than Date.now() and always increases at a constant rate, independent of the system clock.</p>
 
         </div>
         <div id="disqus_thread"></div>

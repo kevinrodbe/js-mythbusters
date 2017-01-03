@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
-    <title>Memoizaton - JS MythBusters_</title>
+    <script src="../assets/script.js?t=36f3d457"></script>
+    <title>Memoization - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
         (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title -active link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title -active link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -117,18 +115,17 @@
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="memoization:-cache-successive-calls.">Memoization: Cache successive calls.</h1>
+        <div class="markdown-body"><h1 id="memoization:-cache-successive-calls">Memoization: Cache successive calls</h1>
 <p>Just calculate the value of something once and reuse the value. This avoids the cost of recalculating the same value.</p>
-<p>If you need to control a set of small values, you can use a <code>Map</code>:</p>
-<pre><code class="lang-js"><span class="pl-k">var</span> cache = <span class="pl-k">new</span> <span class="pl-c1">Map</span>()
-
+<pre><code class="lang-js"><span class="pl-k">var</span> cache = <span class="pl-c1">Object</span>.create(<span class="pl-c1">null</span>)
 <span class="pl-k">var</span> cityOne = <span class="pl-s">&apos;Murcia&apos;</span>
 <span class="pl-k">var</span> cityTwo = <span class="pl-s">&apos;Madrid&apos;</span>
 <span class="pl-k">var</span> routeName = <span class="pl-s">`<span class="hljs-subst">${cityOne}</span><span class="hljs-subst">${cityTwo}</span>`</span>
-
 <span class="pl-k">if</span> (!cache.has(routeName)) cache.set(routeName, getDistance(cityOne, cityTwo))
 </code></pre>
-<p>A more complex, but better solution, would be to control the size of the <code>Map</code>. One example would be to use an LRU cache.</p>
+<p>Notes that first line is <code>Object.create(null)</code>. This create a <code>Object</code> without <code>prototype</code>. because we want a pure object for be used as a Hash Table (with all the <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/prototype">prototypical method</a> missing).</p>
+<p>If you need more control about your cache, you can create it using Map or WeakMap structures. Specially use it when you want to remove items from the cache.</p>
+<p><a href="https://www.npmjs.com/package/lru">LRU</a> or <a href="https://www.npmjs.com/package/mem">mem</a> are good high level libraries that implement this technique.</p>
 
         </div>
         <div id="disqus_thread"></div>

@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Interpolating variables - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -118,8 +116,8 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="interpolating-variables">Interpolating variables</h1>
-<p>Creating an <code>String</code> interpolating variables always was a pain.</p>
-<p>The solution that have <a href="https://jsperf.com/concat-vs-plus-vs-join">more</a> <a href="https://jsperf.com/string-concat-fast/17">perfomance</a> is using <code>+=</code> operator:</p>
+<p>Creating a <code>String</code> interpolating variables was always a pain.</p>
+<p>The solution that has <a href="https://jsperf.com/concat-vs-plus-vs-join">more</a> <a href="https://jsperf.com/string-concat-fast/17">perfomance</a> is using the <code>+=</code> operator:</p>
 <pre><code class="lang-js">
 <span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span> (<span class="hljs-params">name</span>) </span>{
   <span class="pl-k">var</span> message = <span class="pl-s">&apos;&apos;</span>
@@ -132,7 +130,7 @@
 <span class="pl-k">var</span> sayHello = greetings(<span class="pl-s">&apos;Kiko&apos;</span>)
 <span class="pl-c1">console</span>.log(sayHello) <span class="pl-c">// =&gt; &apos;Hello Kiko, how are you?&apos;</span>
 </code></pre>
-<p>However, nowadays is totally recommended (less code and good perfomance) use template string for this purpose:</p>
+<p>However, nowadays it is recommended to use template strings due to implying less code and more perfomance:</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">greetings</span> (<span class="hljs-params">name</span>) </span>{
   <span class="pl-k">return</span> <span class="pl-s">`Hello <span class="hljs-subst">${name}</span>, how are you?`</span>
 }

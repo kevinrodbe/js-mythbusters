@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>new agnostic - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -118,7 +116,7 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="new-agnostic"><code>new</code> agnostic</h1>
-<p>Even your function is called or not using <code>new</code> keyword, you can force to have the same behavior in both cases:</p>
+<p>You can force an <code>Object</code> constructor to return an instance of the <code>Object</code> even when the <code>new</code> keyword hasn&#x2019;t been used:</p>
 <pre><code class="lang-js"><span class="hljs-function"><span class="pl-k">function</span> <span class="pl-ent">User</span> (<span class="hljs-params">name, passwordHash</span>) </span>{
   <span class="pl-k">if</span> (!(<span class="pl-k">this</span> <span class="pl-k">instanceof</span> User)) <span class="pl-k">return</span> <span class="pl-k">new</span> User(name, passwordHash) <span class="pl-c">// magic line!</span>
 
@@ -133,6 +131,11 @@
 x <span class="pl-k">instanceof</span> User <span class="pl-c">// true</span>
 y <span class="pl-k">instanceof</span> User <span class="pl-c">// true</span>
 </code></pre>
+<p>This behavior is also supported by default by some native types in order to be backward compatibility with the <a href="https://tc39.github.io/ecma262">ECMAScript</a> specification, like:</p>
+<ul>
+<li><a href="https://tc39.github.io/ecma262/#sec-regexp-constructor">RegExp constructor</a>.</li>
+<li><a href="https://tc39.github.io/ecma262/#sec-error-constructor">Error constructor</a>.</li>
+</ul>
 
         </div>
         <div id="disqus_thread"></div>

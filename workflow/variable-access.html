@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Variable access - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -119,20 +117,19 @@
         </div>
         <div class="markdown-body"><h1 id="variable-access-over-arrayobject-access.">Variable access over array/object access.</h1>
 <p>If you need to check the result more than once.</p>
-<p>When it comes to Javascript data, there&#x2019;s pretty much four ways to access it: literal values, variables, object properties, and array items. When thinking about optimization, literal values and variables perform about the same, and are significantly faster than object properties and array items.</p>
-<p>So whenever you reference an object property or array item multiple times, you can get a performance boost by defining a variable. (This applies to both reading and writing data).</p>
+<p>When it comes to Javascript data, there&#x2019;s pretty much four ways to access it: literal values, variables, object properties, and array items. When thinking about optimization, literal values and variables perform about the same, and are significantly faster than object properties and array items. So whenever you reference an object property or array item multiple times, you can get a performance boost by defining a variable. (This applies to both reading and writing data).</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> name = myObject.name
 <span class="pl-k">var</span> value = array[<span class="hljs-number">3</span>]
 </code></pre>
 <p>Consider this loop:</p>
 <pre><code class="lang-js"><span class="pl-c">// minimizing property lookups</span>
-<span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="hljs-number">0</span>, len = items.length; i &lt; len; i++) process(items[i])
+<span class="pl-k">for</span> (<span class="pl-k">var</span> i = <span class="hljs-number">0</span>, num = items.length; i &lt; num; i++) process(items[i])
 </code></pre>
 <pre><code class="lang-js"><span class="pl-k">var</span> j = <span class="hljs-number">0</span>
-<span class="pl-k">var</span> count = items.length
-<span class="pl-k">while</span> (j &lt; count) process(items[j++])
+<span class="pl-k">var</span> num = items.length
+<span class="pl-k">while</span> (j &lt; num) process(items[j++])
 </code></pre>
-<p>Maybe you can move out the first iteration of the loop if you know that <code>num &gt; 0</code>:</p>
+<p>You can remove the first iteration of the loop if you know that <code>num &gt; 0</code>:</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> k = <span class="hljs-number">0</span>
 <span class="pl-k">var</span> num = items.length
 
@@ -140,7 +137,7 @@
 <span class="pl-k">while</span> (k &lt; num)
 </code></pre>
 <p>Depending on the length of the array, you can save around 25% off the total loop execution time in most engines.</p>
-<p>Another good low level tip is decrement the value:</p>
+<p>Another good low level tip is to decrement the counter value instead of incrementing it.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> j = items.length
 
 <span class="pl-k">while</span> (j--) {

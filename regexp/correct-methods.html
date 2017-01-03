@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Correct method - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -36,7 +36,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -94,8 +94,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title -active link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -118,13 +116,13 @@
           </div>
         </div>
         <div class="markdown-body"><h1 id="use-the-correct-regexp-method">Use the correct <code>RegExp</code> method</h1>
-<p>In general terms:</p>
+<p>In general:</p>
 <ul>
-<li>Use <code>.test</code> if you want a faster boolean check.</li>
-<li>Use <code>.match</code> to retrieve all matches when using the g global flag.</li>
+<li>Use <code>.test</code> if you want a fast boolean check.</li>
+<li>Use <code>.match</code> to retrieve all matches when using the <code>g</code> flag.</li>
 </ul>
 <blockquote>
-<p>It&#x2019;s possible that you can gain an extra of perfomance using String method to match <code>RegExp</code> instead of RegExp to match String. It&#x2019;s depends of your case of use and of your JavaScript Engine. Check <a href="https://jsperf.com/regexp-test-search-vs-indexof/12">test#1</a>, <a href="https://jsperf.com/regex-methods-x-1/2">test#2</a> &amp; <a href="https://jsperf.com/test-vs-indexof-fast/5">test#3</a> benchmarks.</p>
+<p>It is possible to gain extra perfomance using <code>String</code> method to match <code>RegExp</code> instead of <code>RegExp</code> to match <code>String</code>. It depends on your use case and of your JavaScript engine. Check <a href="https://jsperf.com/regexp-test-search-vs-indexof/12">test#1</a>, <a href="https://jsperf.com/regex-methods-x-1/2">test#2</a> and <a href="https://jsperf.com/test-vs-indexof-fast/5">test#3</a> benchmarks.</p>
 </blockquote>
 
         </div>
@@ -138,7 +136,7 @@
         </script>
         <noscript>Please enable JavaScript to view the<a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <div class="footer-nav">
-          <div class="left"><a href="../regexp/declaring-instances.html"><span class="title">Declaring instances</span></a></div>
+          <div class="left"><a href="../function/bind.html"><span class="title">.bind is slower</span></a></div>
           <div class="right"><a href="../regexp/fail-faster.html"><span class="label">Next: </span><span class="title">Focus on failing faster</span></a></div>
         </div>
       </div>

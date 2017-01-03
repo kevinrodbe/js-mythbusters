@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../assets/style.css?t=1a27ef70">
-    <link rel="stylesheet" href="../css/build.css?t=e0d7294c">
+    <link rel="stylesheet" href="../assets/style.css?t=615badd5">
+    <link rel="stylesheet" href="../css/build.css?t=73069eed">
     <script src="../js/main.js?t=144020c5"></script>
-    <script src="../assets/script.js?t=f85f3155"></script>
+    <script src="../assets/script.js?t=36f3d457"></script>
     <title>Lookup table - JS MythBusters_</title>
     <meta name="viewport" content="width=device-width">
     <script>if (false || window.location.hostname.indexOf("mythbusters.js.org") === window.location.hostname.length - 18) {
@@ -44,7 +44,7 @@
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowmath" href="../workflow/math.html">Math methods</a>
                 </li>
-                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoizaton</a>
+                <li class="menu-item -level-2"><a class="link title  link-workflowmemoization" href="../workflow/memoization.html">Memoization</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-workflowscope" href="../workflow/scope.html">Scope</a>
                 </li>
@@ -102,8 +102,6 @@
             </li>
             <li class="menu-item -level-1 -parent"><span class="title">RegExp</span>
               <ul class="submenu">
-                <li class="menu-item -level-2"><a class="link title  link-regexpdeclaring-instances" href="../regexp/declaring-instances.html">Declaring instances</a>
-                </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpcorrect-methods" href="../regexp/correct-methods.html">Correct method</a>
                 </li>
                 <li class="menu-item -level-2"><a class="link title  link-regexpfail-faster" href="../regexp/fail-faster.html">Focus on failing faster</a>
@@ -129,11 +127,11 @@
 <p>When optimizing <code>if</code>/<code>else</code>, minimize the number of conditions to evaluate. This applies to <code>switch</code> cases as well.</p>
 <p>The easiest optimization is to ensure that the most common conditions are first:</p>
 <pre><code class="lang-js"><span class="pl-k">if</span> (value &lt; <span class="hljs-number">5</span>) {
-  <span class="pl-c">// most frequency case</span>
+  <span class="pl-c">// most frequent case</span>
 } <span class="pl-k">else</span> <span class="pl-k">if</span> (value &gt; <span class="hljs-number">5</span> &amp;&amp; value &lt; <span class="hljs-number">10</span>) {
-  <span class="pl-c">// second frequency case</span>
+  <span class="pl-c">// second most frequent case</span>
 } <span class="pl-k">else</span> {
- <span class="pl-c">// in other case</span>
+ <span class="pl-c">// other less frequent cases</span>
 }
 </code></pre>
 <h2 id="index-lookups">Index lookups</h2>
@@ -156,7 +154,7 @@ lookupTable[compare(<span class="hljs-number">4</span>, myValue)]
 <li>In other cases, use <code>Object</code>.</li>
 </ul>
 <h2 id="caveats">Caveats</h2>
-<p>Although is more readable, using a lookup table isn&#x2019;t always better. The cost of creating the lookup table could be higher than using a set of <code>if</code>/<code>else</code> statements. So, it depends on your code:</p>
+<p>Although it is more readable, using a lookup table isn&#x2019;t always better. The cost of creating the lookup table could be higher than using a set of <code>if</code>/<code>else</code> statements. So, it depends on your code:</p>
 <ul>
 <li>If you have to handle a small set of conditions (maybe less than 3) or the code runtime life is short, use <code>if</code>/<code>else</code>.</li>
 <li>In other cases, use a lookup table.</li>
